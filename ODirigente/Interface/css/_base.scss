@@ -20,8 +20,17 @@ header {
         color: $branco;
         text-transform: uppercase;
         font-style: italic;
-        padding: 17px;
+        padding: 10px;
         display: block;
+        
+        .icone-app {
+            background: url(../img/logo-app.svg);
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
         
         strong {
             font-weight: 800;
