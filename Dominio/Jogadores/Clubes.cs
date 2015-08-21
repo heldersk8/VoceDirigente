@@ -23,5 +23,6 @@ namespace Dominio.Jogadores
         Figueirense = 13,
         Botafogo = 14,
         Barcelona = 15,
+        Flumnense = 16,
     }
 }
