@@ -18,5 +18,7 @@ namespace Dominio.Jogadores
         Vasco = 9,
         Palmeiras = 10,
         PSG = 11,
+        [Description("Málaga")]
+        Malaga = 12,
     }
 }
