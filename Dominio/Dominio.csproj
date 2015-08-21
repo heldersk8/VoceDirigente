@@ -58,6 +58,7 @@
     <Compile Include="Excecao\ExcecaoDeDominio.cs" />
     <Compile Include="Excecao\ViolacaoDeRegra.cs" />
     <Compile Include="Extensoes\ExtensoesDeDateTime.cs" />
+    <Compile Include="Jogadores\DadosDaCarreira.cs" />
     <Compile Include="Jogadores\Jogador.cs" />
     <Compile Include="Jogadores\Posicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
