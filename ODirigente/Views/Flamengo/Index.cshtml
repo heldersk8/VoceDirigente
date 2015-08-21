@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="~/interface/css/reset.css">
 	<link rel="stylesheet" href="~/interface/css/style.css">
 	<link rel="stylesheet" href="~/interface/css/campanhas.css">
-	<link href='http://fonts.googleapis.com/interface/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='interface/text/css'>
+	<link href='http://fonts.googleapis.com/interface/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='~/interface/text/css'>
 </head>
 <body>
 	<header>
@@ -28,7 +28,6 @@
 			<img src="~/interface/img/background.jpg"/>
 		</div>
 
-
        @foreach (var jogador in Model.GroupBy(x => x.Posicao))
        {
         <a href="" class="campanhas">
@@ -37,21 +36,6 @@
             <img src="~/interface/img/atacantes.png" />
         </a>
        }
-	    @*<a href="" class="campanhas">
-			<h2></h2>
-			<span class="escolha">Ajude a contratar</span>
-			<img src="interface/img/atacantes.png"/>
-		</a>
-		<a href="" class="campanhas">
-			<h2>Zagueiro</h2>
-			<span class="escolha">Ajude a contratar</span>
-			<img src="interface/img/atacantes.png"/>
-		</a>
-		<a href="" class="campanhas">
-			<h2>Goleiro</h2>
-			<span class="escolha">Ajude a contratar</span>
-			<img src="interface/img/atacantes.png"/>
-		</a>*@
 	</section>
 	
 </body>
