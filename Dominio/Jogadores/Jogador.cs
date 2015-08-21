@@ -14,6 +14,8 @@ namespace Dominio.Jogadores
         public virtual int Altura { get; set; }
         public virtual bool EhCanhoto { get; set; }
 
+        protected Jogador() { }
+
         public Jogador(string nome, DateTime dataDeNascimento, Posicao posicao, int numeroDeGols, int assistencias, int desarmes, int altura, bool ehCanhoto)
         {
             Nome = nome;

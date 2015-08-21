@@ -5,33 +5,17 @@ namespace Dominio.Jogadores
 {
     public class DadosDaCarreira : Entidade<DadosDaCarreira>
     {
-        public Clubes Clube { get; set; }
-        public IList<Titulo> Titulos { get; set; }
-        public string Biografia { get; set; }
+        public virtual Clubes ClubeAtual { get; set; }
+        public virtual List<Titulo> Titulos { get; set; }
+        public virtual string Biografia { get; set; }
 
-    }
+        protected DadosDaCarreira() { }
 
-    public class Titulo : ObjetoDeValor<Titulo>
-    {
-        protected override bool TodosOsAtributosSaoIguais(Titulo outroObjetoDeValor)
+        public DadosDaCarreira(Clubes clubeAtual, List<Titulo> titulos, string biografia)
         {
-            throw new System.NotImplementedException();
+            ClubeAtual = clubeAtual;
+            Titulos = titulos;
+            Biografia = biografia;
         }
-
-        protected override int ObterHashCode()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
-
-    public enum Clubes
-    {
-        Cruzeiro = 1,
-        Corinthians = 2,
-        Flamengo = 3,
-        Grêmio = 4,
-        Santos = 5,
-        Atlético = 6
-
     }
 }
