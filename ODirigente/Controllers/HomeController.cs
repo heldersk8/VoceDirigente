@@ -17,7 +17,10 @@ namespace ODirigente.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            Session["Jogandores"] = new List<string> {"ronaldo", "ronaldinho"};
+            var viewModel = new ViewModelZord {Jogadores = (List<string>) Session["Jogandores"]};
+
+            return View(viewModel);
         }
 
         public ActionResult Contact()
@@ -26,5 +29,10 @@ namespace ODirigente.Controllers
 
             return View();
         }
+    }
+
+    public class ViewModelZord
+    {
+        public List<string> Jogadores { get; set; }
     }
 }
