@@ -1,0 +1,54 @@
+@import "_mixins";
+
+@keyframes aparecer-campanha {
+    from { opacity: 0; margin-top: 30px; }
+    to { opacity: 1; margin-top: 0px; }
+}
+
+.campanhas {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 5%;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid $terceira-cor;
+    box-shadow: 0px 15px 20px -10px rgba(0,0,0,0.5);
+    -webkit-animation: aparecer-campanha 1s ease 1s 1 normal;
+    -webkit-animation-fill-mode: both;
+    animation: aparecer-campanha 1.5s ease 1s 1 normal;
+    animation-fill-mode: both;
+    
+    h2 {
+        color: $branco;
+        font-size: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+        position: absolute;
+        font-weight: 800;
+        bottom: 15px;
+        width: 120px;
+        text-shadow: 0px 5px 10px black;
+        box-shadow: 0px 5px 10px 0px #000;
+        display: inline-block;
+        background: $segunda-cor;
+        padding: 5px 20px;
+        border: 1px solid $branco;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    &:nth-child(odd) h2 {
+        left: 30px;
+    }
+    
+    &:nth-child(even) h2 {
+        right: 30px;
+    }
+}
