@@ -1,25 +1,39 @@
 ﻿@model ODirigente.ViewModels.JogadorPorPosicaoVm
+<link rel="stylesheet" href="~/interface/css/jogadores.css">
+<h1>Atacantes</h1>
 
-    @foreach (var jogador in Model.Jogadores)
-    {
-        @Html.HiddenFor(model => jogador.Id)
-        <div> Nome: @jogador.Id</div>
-        <div> Nome: @jogador.Nome</div>
+@foreach (var jogador in Model.Jogadores)
+{
+    @Html.HiddenFor(model => jogador.Id)
+    <a href="#" class="jogadores">
+        <h2>@jogador.Nome</h2>
+        <span class="escolha">
+            <small>Valor arrecadado</small>
+            R$ 800.000,00
+        </span>
+        <div class="likes" onclick="DaUmLike(@jogador.Id)">
+            <span class="likes__curtir">
+                <span class="icone-curtir"></span>
+                <span>Curtir</span>
+                <strong>@jogador.Likes</strong>
+            </span>
+        </div>
+        <span class="doacao">
+            Fazer doação
+        </span>
+        <img src="~/Interface/img/pato.png" />
+    </a>
+}
 
-        <div> Altura: @jogador.Altura cm</div>
-        <div> Nascimento: @jogador.DataDeNascimento</div>
-        <input id="@jogador.Id" type="submit" value="@jogador.Likes" onclick="DaUmLike(@jogador.Id)" />
+<script>
+    function DaUmLike(id) {
+        var data = { zagueiroId: id };
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("LikeNaZagueirada")',
+            data: data,
+            success: function (response) { alert(response); }
+        });
     }
-
-    <script>
-        function DaUmLike(id) {
-            var data = { zagueiroId: id };
-
-            $.ajax({
-                type: "POST",
-                url: '@Url.Action("LikeNaZagueirada")',
-                data: data,
-                success: function (response) { alert(response); }
-            });
-        }
-    </script>
+</script>
