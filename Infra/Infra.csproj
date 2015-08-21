@@ -73,7 +73,6 @@
     <Compile Include="Mapeamentos\JogadorMap.cs" />
     <Compile Include="Mapeamentos\TituloMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorios\Dominio\FinanciamentoRepositorio.cs" />
     <Compile Include="SessionFactory\ConfiguradorDeSessionFactory.cs" />
     <Compile Include="SessionFactory\ConfiguradorDeSessionFactoryComAtualizacaoDeEsquema.cs" />
     <Compile Include="_Base\Configuracoes\Configurador.cs" />
@@ -90,7 +89,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Repositorios\Dominio\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{7dbd8288-4457-4f7f-8184-9cf5c145cebb}</Project>
@@ -98,6 +99,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScriptsDeJogadores\JeffersonOliveira.sql" />
     <Content Include="ScriptsDeJogadores\LuizFelipe.sql" />
     <Content Include="ScriptsDeJogadores\GuilhermoOchoa.sql" />
     <Content Include="ScriptsDeJogadores\SergioRomero.sql" />
