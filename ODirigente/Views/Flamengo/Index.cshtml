@@ -1,4 +1,4 @@
-@model IEnumerable<Jogador>
+﻿@model IEnumerable<Dominio.Jogadores.Jogador>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,43 +6,52 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=100px, initial-scale=1.0, maximum-scale=1.0'/>
 	<title>Cardappio | Restaurante</title>
-	<link rel="stylesheet" href="interface/css/reset.css">
-	<link rel="stylesheet" href="interface/css/style.css">
-	<link rel="stylesheet" href="interface/css/campanhas.css">
-    <link href='http://fonts.googleapis.com/interface/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='interface/text/css'>
+	<link rel="stylesheet" href="~/interface/css/reset.css">
+	<link rel="stylesheet" href="~/interface/css/style.css">
+	<link rel="stylesheet" href="~/interface/css/campanhas.css">
+	<link href='http://fonts.googleapis.com/interface/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='interface/text/css'>
 </head>
 <body>
-    <header>
-        <span class="escudo">
-            <img src="interface/img/logo-flamengo.png"/>
-        </span>
-        <span class="logo-app">O <strong>Dirigente</strong></span>
-    </header>
-    
-    <section>
-       <h1>Campanhas</h1>
-       
-        <div class="mensagem">
-           <big>Frase de efeito!</big>
-            <small>Ajude o Flamengo a contratar jogadores e melhorar nosso desempenho.</small>
-            <img src="interface/img/background.jpg"/>
-        </div>
-        
+	<header>
+		<span class="escudo">
+			<img src="~/interface/img/logo-flamengo.png"/>
+		</span>
+		<span class="logo-app">O <strong>Dirigente</strong></span>
+	</header>
+	
+	<section>
+	   <h1>Campanhas</h1>
+	   
+		<div class="mensagem">
+		   <big>Frase de efeito!</big>
+			<small>Ajude o Flamengo a contratar jogadores e melhorar nosso desempenho.</small>
+			<img src="~/interface/img/background.jpg"/>
+		</div>
+
+
+       @foreach (var jogador in Model.GroupBy(x => x.Posicao))
+       {
         <a href="" class="campanhas">
-            <h2>@Model.Posicao</h2>
+            <h2>@jogador.Key</h2>
             <span class="escolha">Ajude a contratar</span>
-            <img src="interface/img/atacantes.png"/>
+            <img src="~/interface/img/atacantes.png" />
         </a>
-        <a href="" class="campanhas">
-            <h2>Zagueiro</h2>
-            <span class="escolha">Ajude a contratar</span>
-            <img src="interface/img/atacantes.png"/>
-        </a>
-        <a href="" class="campanhas">
-            <h2>Goleiro</h2>
-            <span class="escolha">Ajude a contratar</span>
-            <img src="interface/img/atacantes.png"/>
-        </a>
+       }
+	    @*<a href="" class="campanhas">
+			<h2></h2>
+			<span class="escolha">Ajude a contratar</span>
+			<img src="interface/img/atacantes.png"/>
+		</a>
+		<a href="" class="campanhas">
+			<h2>Zagueiro</h2>
+			<span class="escolha">Ajude a contratar</span>
+			<img src="interface/img/atacantes.png"/>
+		</a>
+		<a href="" class="campanhas">
+			<h2>Goleiro</h2>
+			<span class="escolha">Ajude a contratar</span>
+			<img src="interface/img/atacantes.png"/>
+		</a>*@
 	</section>
 	
 </body>

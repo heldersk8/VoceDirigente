@@ -1,12 +1,12 @@
-﻿using System.Web.Mvc;
-using Dominio.Repositorios;
+﻿using Dominio.Repositorios;
 using ODirigente.ViewModels;
+using System.Web.Mvc;
 
 namespace ODirigente.Controllers
 {
     public class FlamengoController : Controller
     {
-        private IJogadorRepositorio _jogadorRepositorio;
+        private readonly IJogadorRepositorio _jogadorRepositorio;
 
         public FlamengoController(IJogadorRepositorio jogadorRepositorio)
         {

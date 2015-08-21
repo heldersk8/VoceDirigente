@@ -4,11 +4,9 @@ VALUES('Francisco Guillermo Ochoa Magaña', '1985-07-13 00:00:00.998', 1, 0, 0, 0
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();
 
-GO
 INSERT INTO dadosDaCarreira(Biografia,ClubeAtual,idjogador) VALUES 
 ('Francisco Guillermo Ochoa Magaña (Guadalajara, 13 de julho de 1985) é um futebolista mexicano que atua como goleiro. Defende o Málaga. Ochoa foi revelado no América onde atuou entre 2004 e 2011, quando transferiu-se ao clube francês AC Ajaccio. Em 1 de agosto de 2014 assinou contrato por três temporadas com o Málaga.', 12, @IdJogador)
 
-GO
 DECLARE @dadosDaCarreira int
 set @dadosDaCarreira = (select top 1 id from dadosdacarreira order by id desc)
 
