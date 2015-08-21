@@ -70,6 +70,8 @@
     <Compile Include="DI\PropertyInjection.cs" />
     <Compile Include="Helpers\ConfiguracoesGlobais.cs" />
     <Compile Include="Mapeamentos\DadosDaCarreiraMap.cs" />
+    <Compile Include="Mapeamentos\DoacaoMap.cs" />
+    <Compile Include="Mapeamentos\DoadorMap.cs" />
     <Compile Include="Mapeamentos\JogadorMap.cs" />
     <Compile Include="Mapeamentos\TituloMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +101,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScriptsDeJogadores\MarceloSilva.sql" />
+    <Content Include="ScriptsDeJogadores\RonaldinhoGaucho.sql" />
+    <Content Include="ScriptsDeJogadores\NeymarJunior.sql" />
     <Content Include="ScriptsDeJogadores\JeffersonOliveira.sql" />
     <Content Include="ScriptsDeJogadores\LuizFelipe.sql" />
     <Content Include="ScriptsDeJogadores\GuilhermoOchoa.sql" />
