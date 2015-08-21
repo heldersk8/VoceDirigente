@@ -13,6 +13,7 @@ namespace Dominio.Jogadores
         public virtual int Desarmes { get; set; }
         public virtual int Altura { get; set; }
         public virtual bool EhCanhoto { get; set; }
+        public virtual decimal ValorDoPasse { get; set; }
 
         protected Jogador() { }
 

@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Comum\ObjetoDeValor.cs" />
     <Compile Include="Comum\Entidade.cs" />
+    <Compile Include="Doacoes\Doacao.cs" />
+    <Compile Include="Doacoes\Doador.cs" />
     <Compile Include="Excecao\ExcecaoDeDominio.cs" />
     <Compile Include="Excecao\ViolacaoDeRegra.cs" />
     <Compile Include="Extensoes\ExtensoesDeDateTime.cs" />

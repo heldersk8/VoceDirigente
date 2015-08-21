@@ -70,6 +70,8 @@
     <Compile Include="DI\PropertyInjection.cs" />
     <Compile Include="Helpers\ConfiguracoesGlobais.cs" />
     <Compile Include="Mapeamentos\DadosDaCarreiraMap.cs" />
+    <Compile Include="Mapeamentos\DoacaoMap.cs" />
+    <Compile Include="Mapeamentos\DoadorMap.cs" />
     <Compile Include="Mapeamentos\JogadorMap.cs" />
     <Compile Include="Mapeamentos\TituloMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
