@@ -1,0 +1,12 @@
+﻿@using NHibernate.Mapping.ByCode.Impl
+@model ODirigente.ViewModels.ZagueiroViewModel
+
+
+@foreach (var zagueiro in Model.Zagueiros)
+{
+    <div> Nome: @zagueiro.Nome</div>
+    <div> Altura: @zagueiro.Altura cm</div>
+    <div> Nascimento: @zagueiro.DataDeNascimento</div>
+
+}
+

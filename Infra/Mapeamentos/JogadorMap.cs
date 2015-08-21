@@ -16,6 +16,8 @@ namespace Infra.Mapeamentos
             Map(x => x.NumeroDeGols);
             Map(x => x.Posicao);
             Map(x => x.ValorDoPasse);
+            Map(x => x.Likes);
+            Map(x => x.Dislikes);
         }
     }
 }
