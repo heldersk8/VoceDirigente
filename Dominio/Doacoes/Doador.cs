@@ -4,8 +4,10 @@ namespace Dominio.Doacoes
 {
     public class Doador : Entidade<Doador>
     {
-        public string Nome { get; set; }
-        public string CartaoDeCredito { get; set; }
+        public virtual string Nome { get; set; }
+        public virtual string CartaoDeCredito { get; set; }
+
+        protected Doador() { }
 
         public Doador(string nome, string cartaoDeCredito)
         {
