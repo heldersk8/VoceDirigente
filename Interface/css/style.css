@@ -100,25 +100,55 @@ h1 {
   margin: 30px 0 10px;
   letter-spacing: -0.05em;
   border-bottom: 2px solid #fff;
-  display: inline-block;
+  display: block;
   text-align: right;
   padding: 10px 30px;
   position: fixed;
   top: 20px;
-  background: #930605; }
+  background: #930605;
+  z-index: 3; }
 
-/* line 78, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 79, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 h2 {
   font-family: "Roboto Condensed", sans-serif;
   letter-spacing: -0.05em; }
 
-/* line 83, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 84, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .mensagem {
   font-size: 14px;
   color: #fff;
   padding: 15px 20px;
   background: rgba(0, 0, 0, 0.8);
   width: 95%;
-  margin: 10px auto; }
+  margin: 10px auto;
+  overflow: hidden;
+  position: relative; }
+  /* line 94, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  .mensagem big {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 40px;
+    display: block;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 15px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 0px 5px 10px black;
+    font-weight: 800; }
+  /* line 108, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  .mensagem small {
+    z-index: 2;
+    position: relative;
+    text-shadow: 0px 5px 10px black; }
+  /* line 114, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  .mensagem img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    min-height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

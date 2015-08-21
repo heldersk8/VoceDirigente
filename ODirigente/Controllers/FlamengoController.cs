@@ -3,11 +3,11 @@ using Dominio.Repositorios;
 
 namespace ODirigente.Controllers
 {
-    public class ZagueiroController : Controller
+    public class FlamengoController : Controller
     {
         private IJogadorRepositorio _jogadorRepositorio;
 
-        public ZagueiroController(IJogadorRepositorio jogadorRepositorio)
+        public FlamengoController(IJogadorRepositorio jogadorRepositorio)
         {
             _jogadorRepositorio = jogadorRepositorio;
 
