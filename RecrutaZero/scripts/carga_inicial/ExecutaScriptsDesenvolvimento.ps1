@@ -1,1 +1,0 @@
-Get-ChildItem 'D:\ProjetosTfs\RecrutaZero\RecrutaZero\scripts\carga_inicial' -recurse -i *.sql | foreach ($_) {sqlcmd -S '(local)' -d RecrutaZero -i $_.fullname}
