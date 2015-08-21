@@ -24,5 +24,7 @@ namespace Dominio.Jogadores
         Botafogo = 14,
         Barcelona = 15,
         Flumnense = 16,
+        [Description("Real Madrid")]
+        RealMadrid = 17,
     }
 }
