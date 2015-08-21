@@ -1,0 +1,26 @@
+﻿@using RecrutaZero.WebApp._Base.Extensions
+@model RecrutaZero.WebApp.ViewModels.ProcessoSeletivoVm
+
+@{
+    ViewBag.Title = "Criação de processo seletivo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Index", "ProcessoSeletivo", FormMethod.Post))
+{
+    <label for="Ocupacao">Ocupação: </label>
+    @Html.DropDownListFor(x => x.OcupacaoId, Model.Ocupacoes.ToSelectList(x => x.Descricao, x => x.Id, itemDefault: ItemDefault.ComTextoEValoresVazios()))
+
+    <label for="ParaOTime">Para o time: </label>
+    @Html.TextBoxFor(x => x.ParaOTime)
+
+    <label for="DescricaoDaVaga">Descrição da vaga</label>
+    @Html.TextAreaFor(x => x.DescricaoDaVaga)
+
+    <button type="submit" title="Salvar processo seletivo">Salvar</button>
+
+    @Html.ValidationSummary()
+}
+
+@Html.ActionLink("Voltar", "Index", "ProcessoSeletivo", new { @class = "icon-link-voltar", @title = "Clique para voltar."})

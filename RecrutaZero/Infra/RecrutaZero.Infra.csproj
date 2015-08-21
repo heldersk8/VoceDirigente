@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99F64475-E72B-4A52-93EF-012371723512}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RecrutaZero.Infra</RootNamespace>
+    <AssemblyName>RecrutaZero.Infra</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.6.6.0\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.1001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\FacebookAccessTokenDao.cs" />
+    <Compile Include="DI\IContainer.cs" />
+    <Compile Include="DI\NinjectContainerAdapter.cs" />
+    <Compile Include="DI\PropertyInjection.cs" />
+    <Compile Include="EnvioDeEmail\EnvioDeEmail.cs" />
+    <Compile Include="EnvioDeEmail\EnvioDeEmailException.cs" />
+    <Compile Include="EnvioDeEmail\LeitorDeTempladoDeEmail.cs" />
+    <Compile Include="Helpers\ConfiguracoesGlobais.cs" />
+    <Compile Include="Mapeamentos\CandidatoMap.cs" />
+    <Compile Include="Mapeamentos\CandidatoParaSelecaoMap.cs" />
+    <Compile Include="Mapeamentos\FacebookTokenMap.cs" />
+    <Compile Include="Mapeamentos\OcupacaoMap.cs" />
+    <Compile Include="Mapeamentos\PassoParaSelecaoMap.cs" />
+    <Compile Include="Mapeamentos\PassosMap.cs" />
+    <Compile Include="Mapeamentos\ProcessoSeletivoMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedesSociais\ComunicacaoComFacebook.cs" />
+    <Compile Include="Repositorios\Dominio\CandidatoParaSelecaoRepositorio.cs" />
+    <Compile Include="Repositorios\Dominio\CandidatoRepositorio.cs" />
+    <Compile Include="Repositorios\Dominio\OcupacaoRepositorio.cs" />
+    <Compile Include="Repositorios\Dominio\PassoRepositorio.cs" />
+    <Compile Include="Repositorios\Dominio\ProcessoSeletivoRepositorio.cs" />
+    <Compile Include="SessionFactory\ConfiguradorDeSessionFactory.cs" />
+    <Compile Include="SessionFactory\ConfiguradorDeSessionFactoryComAtualizacaoDeEsquema.cs" />
+    <Compile Include="_Base\Configuracoes\Configurador.cs" />
+    <Compile Include="_Base\Configuracoes\ConfiguradorDeSessionFactory.cs" />
+    <Compile Include="_Base\Configuracoes\Contexto.cs" />
+    <Compile Include="_Base\Configuracoes\ConvencaoEnum.cs" />
+    <Compile Include="_Base\Configuracoes\CustomForeignKeyConvention.cs" />
+    <Compile Include="_Base\Configuracoes\PrimaryKeyConvention.cs" />
+    <Compile Include="_Base\Configuracoes\ServidorDePublicacao.cs" />
+    <Compile Include="_Base\Mapeamentos\MapBase.cs" />
+    <Compile Include="_Base\QueryHelpers\ExtensoesDeLinq.cs" />
+    <Compile Include="_Base\Repositorios\RepositorioBaseDominio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RecrutaZero.Dominio\RecrutaZero.Dominio.csproj">
+      <Project>{7dbd8288-4457-4f7f-8184-9cf5c145cebb}</Project>
+      <Name>RecrutaZero.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

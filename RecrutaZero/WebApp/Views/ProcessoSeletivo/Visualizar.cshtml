@@ -1,0 +1,68 @@
+﻿@using RecrutaZero.Dominio
+@using RecrutaZero.WebApp._Base.Extensions
+@model RecrutaZero.WebApp.ViewModels.CandidatosParaSelecaoPorProcessoVm
+
+@{
+    ViewBag.Title = "Candidatos do processo seletivo";
+}
+
+@Html.HiddenFor(x => x.ProcessoSeletivoId)
+
+<h2>@ViewBag.Title</h2>
+
+@if (Model.ProcessoStatus != StatusDoProcessoSeletivo.Finalizado)
+{
+    <button id="btnEncerrarProcesso" class="botao-encerrar" type="button" title="Encerrar processo de seleção">
+        <span class="icon-cabinet2"></span>
+        Encerrar processo de seleção
+    </button>
+}
+
+<div class="filtro-pesquisa">
+    @using (Html.BeginForm("ConsultarCandidatoParaSelecao", "ProcessoSeletivo"))
+    {
+        @Html.HiddenFor(x => x.ProcessoSeletivoId)
+        
+        <p>
+            <label>Nome</label>
+            @Html.TextBoxFor(x => x.Nome)
+        </p>
+        <button type="submit" class="icon-search-menor"></button>
+    }
+</div>
+
+<div id="resultadosDaPesquisa">
+
+    <h1 class="titulo-da-vaga">@Model.DescricaoDaVaga</h1>
+    
+    @foreach (var candidato in Model.CandidatosParaSelecao)
+    {
+        var telefone = string.IsNullOrEmpty(candidato.Telefone) ? "SEM TELEFONE" : candidato.Telefone;
+
+        <div class="info-candidato">
+            <h3>@candidato.Nome <span class="status-do-candidato" name="@candidato.Candidato.Status.ToDescription()">(@candidato.Candidato.Status.ToDescription())</span></h3>
+            <span>@candidato.Ocupacao.Descricao</span>
+            <span>|</span>
+            <span>@telefone</span>
+
+            <div class="posiciona-botoes">
+                @if (candidato.Candidato.Status == StatusDoCandidato.NaoContratado && Model.ProcessoStatus != StatusDoProcessoSeletivo.Finalizado)
+                {
+                    <input class="icon-medal2 aptidoes" type="button" value="Aptidões" title="Ver aptidões" data-id="@candidato.Id" />
+                    <input class="icon-checkmark contratar" type="button" value="Contratar!!!" title="Contratar candidato!" data-id="@candidato.Id" />
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<div id="dialogAptidoes"></div>
+<div id="dialogContratacao"></div>
+
+@Html.ActionLink("Voltar", "Index", "ProcessoSeletivo", new { @class = "icon-link-voltar", @title = "Clique para voltar." })
+
+<script src="~/Scripts/views/processoSeletivo/visualizarProcessos.js"></script>
+
+<script type="text/javascript">
+    window.visualizarProcessos.init();
+</script>
