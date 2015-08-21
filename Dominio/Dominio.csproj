@@ -66,6 +66,7 @@
     <Compile Include="Jogadores\Posicao.cs" />
     <Compile Include="Jogadores\Titulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\IJogadorRepositorio.cs" />
     <Compile Include="Repositorios\IRepositorioBase.cs" />
     <Compile Include="Specifications\AndSpecification.cs" />
     <Compile Include="Specifications\CompositeSpecification.cs" />

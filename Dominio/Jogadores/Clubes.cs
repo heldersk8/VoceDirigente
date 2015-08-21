@@ -20,5 +20,11 @@ namespace Dominio.Jogadores
         PSG = 11,
         [Description("Málaga")]
         Malaga = 12,
+        Figueirense = 13,
+        Botafogo = 14,
+        Barcelona = 15,
+        Flumnense = 16,
+        [Description("Real Madrid")]
+        RealMadrid = 17,
     }
 }
