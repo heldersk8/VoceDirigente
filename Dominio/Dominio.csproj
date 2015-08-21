@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Comum\ObjetoDeValor.cs" />
     <Compile Include="Comum\Entidade.cs" />
+    <Compile Include="Doacoes\Doacao.cs" />
+    <Compile Include="Doacoes\Doador.cs" />
     <Compile Include="Excecao\ExcecaoDeDominio.cs" />
     <Compile Include="Excecao\ViolacaoDeRegra.cs" />
     <Compile Include="Extensoes\ExtensoesDeDateTime.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Jogadores\Posicao.cs" />
     <Compile Include="Jogadores\Titulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\IJogadorRepositorio.cs" />
     <Compile Include="Repositorios\IRepositorioBase.cs" />
     <Compile Include="Specifications\AndSpecification.cs" />
     <Compile Include="Specifications\CompositeSpecification.cs" />

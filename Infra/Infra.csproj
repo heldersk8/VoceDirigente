@@ -99,6 +99,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScriptsDeJogadores\JeffersonOliveira.sql" />
+    <Content Include="ScriptsDeJogadores\LuizFelipe.sql" />
+    <Content Include="ScriptsDeJogadores\GuilhermoOchoa.sql" />
+    <Content Include="ScriptsDeJogadores\SergioRomero.sql" />
     <Content Include="ScriptsDeJogadores\DavidLuiz.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
