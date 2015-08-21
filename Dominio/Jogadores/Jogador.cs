@@ -30,5 +30,10 @@ namespace Dominio.Jogadores
             Altura = altura;
             EhCanhoto = ehCanhoto;
         }
+
+        public virtual void  DarUmLike()
+        {
+            Likes++;
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿using Dominio.Repositorios;
-using ODirigente.ViewModels;
 using System.Web.Mvc;
+using Dominio.Repositorios;
+using ODirigente.ViewModels;
 
 namespace ODirigente.Controllers
 {
@@ -27,6 +27,16 @@ namespace ODirigente.Controllers
             var viewModel = new ZagueiroViewModel { Zagueiros = listaDeZagueiros };
 
             return View(viewModel);
+        }
+
+        public JsonResult LikeNaZagueirada(int zagueiroId)
+        {
+            var zagueiro = _jogadorRepositorio.ObterPor(zagueiroId);
+
+            zagueiro.DarUmLike();
+            _jogadorRepositorio.Salvar(zagueiro);
+
+            return Json(zagueiro.Likes) ;
         }
     }
 }

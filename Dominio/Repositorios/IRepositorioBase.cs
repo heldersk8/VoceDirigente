@@ -9,6 +9,6 @@ namespace Dominio.Repositorios
         T ObterPor(int id);
         IEnumerable<T> ObterPor(ISpecification<T> specification);
         IEnumerable<T> ObterTodos();
-        void Adicionar(T entidade);
+        void Salvar(T entidade);
     }
 }
