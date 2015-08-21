@@ -5,6 +5,7 @@ namespace Dominio.Jogadores
 {
     public class Jogador : Entidade<Jogador>
     {
+        public virtual string Apelido { get; set; }
         public virtual string Nome { get; set; }
         public virtual DateTime DataDeNascimento { get; set; }
         public virtual Posicao Posicao { get; set; }
@@ -19,8 +20,9 @@ namespace Dominio.Jogadores
 
         protected Jogador() { }
 
-        public Jogador(string nome, DateTime dataDeNascimento, Posicao posicao, int numeroDeGols, int assistencias, int desarmes, int altura, bool ehCanhoto)
+        public Jogador(string apelido, string nome, DateTime dataDeNascimento, Posicao posicao, int numeroDeGols, int assistencias, int desarmes, int altura, bool ehCanhoto)
         {
+            Apelido = apelido;
             Nome = nome;
             DataDeNascimento = dataDeNascimento;
             Posicao = posicao;
