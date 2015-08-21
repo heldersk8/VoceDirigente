@@ -1,5 +1,5 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ODirigente.Infra;
 
 namespace ODirigente
 {
@@ -7,6 +7,7 @@ namespace ODirigente
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new UnitOfWorkAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }
