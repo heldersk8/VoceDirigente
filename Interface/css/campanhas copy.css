@@ -1,0 +1,99 @@
+/* line 30, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-radius-padrao {
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* line 34, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-top-radius-padrao {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
+
+/* line 38, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-right-radius-padrao {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+@keyframes aparecer-campanha {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* line 8, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+.campanhas {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 5%;
+  overflow: hidden;
+  display: block;
+  border-bottom: 2px solid #000;
+  box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: aparecer-campanha 1s ease 1s 1 normal;
+  -webkit-animation-fill-mode: both;
+  animation: aparecer-campanha 1.5s ease 1s 1 normal;
+  animation-fill-mode: both; }
+  /* line 22, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+  .campanhas h2 {
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 800;
+    bottom: 55px;
+    width: 120px;
+    text-shadow: 0px 5px 10px black;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background: #930605;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    z-index: 1;
+    text-align: center; }
+  /* line 41, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+  .campanhas .escolha {
+    color: #fc0d08;
+    font-size: 12px;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 800;
+    bottom: 25px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    z-index: 1;
+    text-align: center; }
+  /* line 58, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+  .campanhas img {
+    width: 50%;
+    height: auto; }
+  /* line 63, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+  .campanhas:nth-child(odd) {
+    text-align: right; }
+    /* line 66, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+    .campanhas:nth-child(odd) h2 {
+      left: 45px; }
+    /* line 70, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+    .campanhas:nth-child(odd) .escolha {
+      left: 25px; }
+  /* line 75, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+  .campanhas:nth-child(even) {
+    text-align: left; }
+    /* line 78, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+    .campanhas:nth-child(even) h2 {
+      right: 45px; }
+    /* line 82, /Users/Glauber/Documents/Projects/o_dirigente/app/css/campanhas copy.scss */
+    .campanhas:nth-child(even) .escolha {
+      right: 25px; }
+
+/*# sourceMappingURL=campanhas copy.css.map */

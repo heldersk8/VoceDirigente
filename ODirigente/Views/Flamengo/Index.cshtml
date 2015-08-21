@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Dominio.Jogadores.Jogador>
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,16 +28,26 @@
 			<small>Ajude o Flamengo a contratar jogadores e melhorar nosso desempenho.</small>
 			<img src="~/interface/img/background.jpg"/>
 		</div>
+=======
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+>>>>>>> 41725fb7a7d88abe814cc2d631c31b24fb8c2946
 
-       @foreach (var jogador in Model.GroupBy(x => x.Posicao))
-       {
-        <a href="" class="campanhas">
-            <h2>@jogador.Key</h2>
-            <span class="escolha">Ajude a contratar</span>
-            <img src="~/interface/img/atacantes.png" />
-        </a>
-       }
-	</section>
-	
-</body>
-</html>
+<h1>Campanhas</h1>
+
+<div class="mensagem">
+    <big>Frase de efeito!</big>
+    <small>Ajude o Flamengo a contratar jogadores e melhorar nosso desempenho.</small>
+    <img src="~/interface/img/background.jpg" />
+</div>
+
+@foreach (var jogador in Model.GroupBy(x => x.Posicao))
+{
+    var posicao = (int)jogador.Key;
+    <a href="@Url.Action("JogadoresPorPosicao", new { posicao })" class="campanhas">
+        <h2>@jogador.Key</h2>
+        <span class="escolha">Ajude a contratar</span>
+        <img src="~/interface/img/atacantes.png" />
+    </a>
+}
