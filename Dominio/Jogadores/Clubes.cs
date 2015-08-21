@@ -22,5 +22,6 @@ namespace Dominio.Jogadores
         Malaga = 12,
         Figueirense = 13,
         Botafogo = 14,
+        Barcelona = 15,
     }
 }
