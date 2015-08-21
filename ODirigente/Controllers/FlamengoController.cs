@@ -1,4 +1,3 @@
-﻿using System.Web.Helpers;
 using System.Web.Mvc;
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
@@ -7,7 +6,7 @@ namespace ODirigente.Controllers
 {
     public class FlamengoController : Controller
     {
-        private IJogadorRepositorio _jogadorRepositorio;
+        private readonly IJogadorRepositorio _jogadorRepositorio;
 
         public FlamengoController(IJogadorRepositorio jogadorRepositorio)
         {
@@ -19,7 +18,7 @@ namespace ODirigente.Controllers
         {
             var todos = _jogadorRepositorio.ObterTodos();
 
-            return View();
+            return View(todos);
         }
 
         public ActionResult Zagueiros()
