@@ -2,20 +2,19 @@
 
 namespace Dominio.Jogadores
 {
-    public class Titulo : ObjetoDeValor<Titulo>
+    public class Titulo : Entidade<Titulo>
     {
-        public string NomeDoCampeonato { get; set; }
-        public int Ano { get; set; }
-        public int QuantidadeDeGols { get; set; }
+        public virtual string NomeDoCampeonato { get; set; }
+        public virtual int Ano { get; set; }
+        public virtual int QuantidadeDeGols { get; set; }
 
-        protected override bool TodosOsAtributosSaoIguais(Titulo outroObjetoDeValor)
-        {
-            throw new System.NotImplementedException();
-        }
+        protected Titulo() { }
 
-        protected override int ObterHashCode()
+        public Titulo(string nomeDoCampeonato, int ano, int quantidadeDeGols)
         {
-            throw new System.NotImplementedException();
+            NomeDoCampeonato = nomeDoCampeonato;
+            Ano = ano;
+            QuantidadeDeGols = quantidadeDeGols;
         }
     }
 }
