@@ -9,7 +9,7 @@ namespace Infra.Mapeamentos
         public DadosDaCarreiraMap()
         {
             References(x => x.Jogador);
-            Map(x => x.Biografia);
+            Map(x => x.Biografia).Length(4001);
             Map(x => x.ClubeAtual);
             HasMany(x => x.Titulos).Cascade.AllDeleteOrphan();
         }

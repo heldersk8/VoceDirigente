@@ -16,6 +16,7 @@ namespace Dominio.Jogadores
         SaoPaulo = 7,
         Internacional = 8,
         Vasco = 9,
-        Palmeiras = 10
+        Palmeiras = 10,
+        PSG = 11,
     }
 }
