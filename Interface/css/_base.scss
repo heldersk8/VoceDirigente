@@ -8,17 +8,24 @@ body {
 }
 
 header {
-    padding: 20px;
-    background: $terceira-cor;
+    background: rgba($terceira-cor, 0.8);
     text-align: left;
     position: fixed;
     width: 100%;
     z-index: 9;
+    height: 50px;
     
-    .time {
+    .logo-app {
         font-size: 16px;
-        color: $primeira-cor;
+        color: $branco;
         text-transform: uppercase;
+        font-style: italic;
+        padding: 17px;
+        display: block;
+        
+        strong {
+            font-weight: 800;
+        }
     }
     
     .escudo {
@@ -27,9 +34,8 @@ header {
         text-align: center;
         display: block;
         position: fixed;
-        top: 25px;
-        left: 50%;
-        margin-left: -30px;
+        top: 20px;
+        right: 20px;
         background: $primeira-cor;
         border: 2px solid $segunda-cor;
         padding: 10px;
@@ -44,30 +50,8 @@ header {
 }
 
 section {
-    padding-top: 70px;
+    padding-top: 100px;
     text-align: left;
-}
-
-.imagem-de-fundo {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    text-align: center;
-    position: fixed;
-    opacity: 0.5;
-    
-    img {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.2);
-        -ms-transform: scale(1.2);
-   	    -webkit-transform: scale(1.2);
-        -webkit-filter: blur(10px);
-        -moz-filter: blur(10px);
-        -o-filter: blur(10px);
-        -ms-filter: blur(10px);
-        filter: blur(10px);
-    }
 }
 
 * {
@@ -78,18 +62,29 @@ h1 {
     font-family: $fonte-principal;
     font-size: 25px;
     text-transform: uppercase;
-    color: $terceira-cor;
+    color: $branco;
     font-style: italic;
     margin: 30px 0 10px;
     letter-spacing: -0.05em;
-    background: $branco;
+    border-bottom: 2px solid $branco;
     display: inline-block;
     text-align: right;
     padding: 10px 30px;
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+    position: fixed;
+    top: 20px;
+    background: $segunda-cor;
 }
 
 h2 {
     font-family: $fonte-principal;
     letter-spacing: -0.05em;
+}
+
+.mensagem {
+    font-size: 14px;
+    color: $branco;
+    padding: 15px 20px;
+    background: rgba($terceira-cor, 0.8);
+    width: 95%;
+    margin: 10px auto;
 }
