@@ -17,7 +17,7 @@ namespace ODirigente.Controllers
         {
             var todos = _jogadorRepositorio.ObterTodos();
 
-            return View();
+            return View(todos);
         }
 
     }
