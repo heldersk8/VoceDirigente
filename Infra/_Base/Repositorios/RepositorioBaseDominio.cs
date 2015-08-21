@@ -41,7 +41,7 @@ namespace Infra._Base.Repositorios
             return Entidades().ToList();
         }
 
-        public void Adicionar(TEntidade entidade)
+        public void Salvar(TEntidade entidade)
         {
             Sessao.SaveOrUpdate(entidade);
         }

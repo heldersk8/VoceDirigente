@@ -14,6 +14,8 @@ namespace Dominio.Jogadores
         public virtual int Altura { get; set; }
         public virtual bool EhCanhoto { get; set; }
         public virtual decimal ValorDoPasse { get; set; }
+        public virtual int Likes { get; set; }
+        public virtual int Dislikes { get; set; }
 
         protected Jogador() { }
 
@@ -27,6 +29,11 @@ namespace Dominio.Jogadores
             Desarmes = desarmes;
             Altura = altura;
             EhCanhoto = ehCanhoto;
+        }
+
+        public virtual void  DarUmLike()
+        {
+            Likes++;
         }
     }
 }
