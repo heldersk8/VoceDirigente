@@ -14,7 +14,8 @@
 
 @foreach (var jogador in Model.GroupBy(x => x.Posicao))
 {
-    <a href="" class="campanhas">
+    var posicao = (int)jogador.Key;
+    <a href="@Url.Action("JogadoresPorPosicao", new { posicao })" class="campanhas">
         <h2>@jogador.Key</h2>
         <span class="escolha">Ajude a contratar</span>
         <img src="~/interface/img/atacantes.png" />

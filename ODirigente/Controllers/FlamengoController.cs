@@ -1,6 +1,6 @@
-using System.Web.Mvc;
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
+using System.Web.Mvc;
 
 namespace ODirigente.Controllers
 {
@@ -21,10 +21,10 @@ namespace ODirigente.Controllers
             return View(todos);
         }
 
-        public ActionResult Zagueiros()
+        public ActionResult JogadoresPorPosicao(int posicao)
         {
-            var listaDeZagueiros = _jogadorRepositorio.ObterTodosZagueiros();
-            var viewModel = new ZagueiroViewModel { Zagueiros = listaDeZagueiros };
+            var jogadoresPorPosicao = _jogadorRepositorio.ObterPorPosicao(posicao);
+            var viewModel = new JogadorPorPosicaoVm { Jogadores = jogadoresPorPosicao };
 
             return View(viewModel);
         }
@@ -36,7 +36,7 @@ namespace ODirigente.Controllers
             zagueiro.DarUmLike();
             _jogadorRepositorio.Salvar(zagueiro);
 
-            return Json(zagueiro.Likes) ;
+            return Json(zagueiro.Likes);
         }
     }
 }

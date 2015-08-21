@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Dominio.Jogadores;
+﻿using Dominio.Jogadores;
+using System.Collections.Generic;
 
 namespace Dominio.Repositorios
 {
     public interface IJogadorRepositorio : IRepositorioBase<Jogador>
     {
-        IEnumerable<Jogador> ObterTodosZagueiros();
+        IEnumerable<Jogador> ObterPorPosicao(int posicao);
     }
 }
