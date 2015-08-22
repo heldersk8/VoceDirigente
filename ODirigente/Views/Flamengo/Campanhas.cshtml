@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Dominio.Jogadores.Jogador>
+
+<link rel="stylesheet" href="~/interface/css/campanhas.css">
+
+<h1>Campanhas</h1>
+
+<div class="mensagem">
+    <big>Frase de efeito!</big>
+    <small>Ajude o Flamengo a contratar jogadores e melhorar nosso desempenho.</small>
+    <img src="~/interface/img/background.jpg" />
+</div>
+
+@foreach (var jogador in Model.GroupBy(x => x.Posicao))
+{
+    var posicao = (int)jogador.Key;
+    <a href="@Url.Action("JogadoresPorPosicao", new { posicao })" class="campanhas">
+        <h2>@jogador.Key</h2>
+        <span class="escolha">Ajude a contratar</span>
+        <img src="~/interface/img/atacantes.png" />
+    </a>
+}

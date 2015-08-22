@@ -23,6 +23,14 @@ namespace ODirigente.Controllers
             return View(todos);
         }
 
+        public ActionResult Campanhas()
+        {
+            var todos = _jogadorRepositorio.ObterTodos();
+
+            return View(todos);
+        }
+
+
         public ActionResult JogadoresPorPosicao(int posicao)
         {
             var jogadoresPorPosicao = _jogadorRepositorio.ObterPorPosicao(posicao);
