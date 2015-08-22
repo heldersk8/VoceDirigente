@@ -13,22 +13,22 @@ namespace ODirigente.Controllers
             return RedirectToAction("Index","Flamengo");
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            Session["Jogandores"] = new List<string> {"ronaldo", "ronaldinho"};
-            var viewModel = new ViewModelZord {Jogadores = (List<string>) Session["Jogandores"]};
+        //    Session["Jogandores"] = new List<string> {"ronaldo", "ronaldinho"};
+        //    var viewModel = new ViewModelZord {Jogadores = (List<string>) Session["Jogandores"]};
 
-            return View(viewModel);
-        }
+        //    return View(viewModel);
+        //}
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 
     public class ViewModelZord
