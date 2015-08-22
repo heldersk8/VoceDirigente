@@ -6,10 +6,10 @@
 {
     @Html.HiddenFor(model => jogador.Id)
     <a href="#" class="jogadores">
-        <h2>@jogador.Nome</h2>
+        <h2>@jogador.Apelido</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
-            R$ 800.000,00
+            @jogador.ValorDoPasse
         </span>
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
