@@ -1,5 +1,5 @@
-INSERT INTO Jogador (Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Neymar da Silva Santos Júnior', '19920205', 6, 196, 0, 88, 175, 0)
+INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
+VALUES('Neymar Júnior', 'Neymar da Silva Santos Júnior', '19920205', 5, 196, 0, 88, 175, 0)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();
@@ -22,6 +22,10 @@ INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VAL
 (2013,'Supercopa da Espanha', 6, @dadosDaCarreira)
 INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VALUES
 (2015,'Liga dos Campeões da UEFA:', 2, @dadosDaCarreira)
+
+INSERT INTO Doador(Nome,CartaoDeCredito) VALUES ('Sandro Yamasaki', 4556461070569326)
+INSERT INTO Doador(Nome,CartaoDeCredito) VALUES ('Helder Pereira', 4556461070569326)
+INSERT INTO Doador(Nome,CartaoDeCredito) VALUES ('Renan Moura', 4556461070569326)
 
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 2, @IdJogador, 3000)
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 1, @IdJogador, 100)

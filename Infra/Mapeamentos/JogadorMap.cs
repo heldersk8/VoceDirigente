@@ -12,6 +12,7 @@ namespace Infra.Mapeamentos
             Map(x => x.DataDeNascimento);
             Map(x => x.Desarmes);
             Map(x => x.EhCanhoto);
+            Map(x => x.Apelido);
             Map(x => x.Nome);
             Map(x => x.NumeroDeGols);
             Map(x => x.Posicao);

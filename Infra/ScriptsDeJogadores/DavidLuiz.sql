@@ -1,5 +1,5 @@
-INSERT INTO Jogador (Altura,Assistencias,DataDeNascimento,Desarmes, ehcanhoto,Nome,NumeroDeGols,Posicao)
-VALUES  (189,4,'19870422',80,0,'David Luiz',5, 2)
+INSERT INTO Jogador (Apelido, Altura,Assistencias,DataDeNascimento,Desarmes, ehcanhoto,Nome,NumeroDeGols,Posicao)
+VALUES  ('David Luiz', 189,4,'19870422',80,0,'David Luiz',4, 2)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();
@@ -18,7 +18,8 @@ INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VAL
 INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VALUES
 (2015,'COPA DA FRANÇA',2,@dadosDaCarreira)
 
+INSERT INTO Doador(Nome,CartaoDeCredito) VALUES ('Jorge Luiz Gomes da Silva', 4485509599757131)
+
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 1, @IdJogador, 600)
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 2, @IdJogador, 50)
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 3, @IdJogador, 300)
-

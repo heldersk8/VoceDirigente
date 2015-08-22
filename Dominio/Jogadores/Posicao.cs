@@ -6,11 +6,8 @@ namespace Dominio.Jogadores
     {
         Goleiro = 1,
         Zagueiro = 2,
-        [Description("Lateral Direito")]
-        LateralDireito = 3,
-        [Description("Lateral Esquerdo")]
-        LateralEsquerdo = 4,
-        Meia = 5,
-        Atacante = 6
+        Laterais = 3,
+        Meia = 4,
+        Atacante = 5,
     }
 }

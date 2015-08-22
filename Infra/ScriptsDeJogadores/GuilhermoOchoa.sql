@@ -1,5 +1,5 @@
-INSERT INTO Jogador (Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Francisco Guillermo Ochoa Magaña', '1985-07-13 00:00:00.998', 1, 0, 0, 0, 183000, 1)
+INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
+VALUES('Ochoa', 'Francisco Guillermo Ochoa Magaña', '19920205', 1, 0, 0, 0, 180, 0)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();
@@ -24,6 +24,8 @@ INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VAL
 (2014,'Copa Mundial de la FIFA 2014', 4, @dadosDaCarreira)
 INSERT INTO Titulo (ano,NomeDoCampeonato,QuantidadeDeGols,IdDadosDaCarreira) VALUES
 (2015,'Copa América 2015', 3, @dadosDaCarreira)
+
+INSERT INTO Doador(Nome,CartaoDeCredito) VALUES ('Glauber Laender', 4556461070569326)
 
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 1, @IdJogador, 00)
 INSERT INTO Doacao (IdDoador, IdJogador, Valor) VALUES ( 2, @IdJogador, 20)
