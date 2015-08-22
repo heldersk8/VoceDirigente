@@ -31,16 +31,6 @@
 
 @section scripts{
     <script>
-        $(document).ready(function () {
-            setInterval(function () {
-                $.getJSON('@Url.Action("AtualizarDoacao", "Flamengo")', function (jogadores) {
-                    $.each(jogadores.Jogadores, function (index, jogador) {
-                        console.log(jogador.Id);
-                    });
-                });
-            }, 4000);
-        });
-
         function DaUmLike(id) {
             var data = { zagueiroId: id };
             $.ajax({
