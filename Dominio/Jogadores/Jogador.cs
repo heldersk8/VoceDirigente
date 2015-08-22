@@ -7,6 +7,8 @@ namespace Dominio.Jogadores
 {
     public class Jogador : Entidade<Jogador>
     {
+        private List<Doacao> _doacoes;
+
         public virtual string Apelido { get; set; }
         public virtual string Nome { get; set; }
         public virtual DateTime DataDeNascimento { get; set; }
@@ -19,7 +21,7 @@ namespace Dominio.Jogadores
         public virtual decimal ValorDoPasse { get; set; }
         public virtual int Likes { get; set; }
         public virtual int Dislikes { get; set; }
-        public virtual IEnumerable<Doacao> Doacoes { get; set; }
+        public virtual IEnumerable<Doacao> Doacoes { get { return _doacoes; } }
 
         protected Jogador() { }
 
@@ -34,12 +36,17 @@ namespace Dominio.Jogadores
             Desarmes = desarmes;
             Altura = altura;
             EhCanhoto = ehCanhoto;
-            Doacoes = new List<Doacao>();
+            _doacoes = new List<Doacao>();
         }
 
         public virtual void DarUmLike()
         {
             Likes++;
+        }
+
+        public virtual void Efetuar(Doacao doacao)
+        {
+            _doacoes.Add(doacao);
         }
     }
 }

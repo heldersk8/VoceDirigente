@@ -40,6 +40,9 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="Nosbor.FluentBuilder">
+      <HintPath>..\packages\Nosbor.FluentBuilder.0.8.3.0\lib\net45\Nosbor.FluentBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -52,8 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doacoes\DoacaoTeste.cs" />
     <Compile Include="Helpers\AssertExtensions.cs" />
     <Compile Include="Helpers\Extensions\ExtensoesDeTiposGenericos.cs" />
+    <Compile Include="Jogadores\JogadorTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,7 @@
     </div>
 }
 
+@section scripts{
 <script>
     function DaUmLike(id) {
         var data = { zagueiroId: id };
@@ -36,9 +37,11 @@
             type: "POST",
             url: '@Url.Action("LikeNaZagueirada")',
             data: data,
-            success: function (response) {
-                $("[name='"+id+"']").text(response);
+            success: function(response) {
+                $("[name='" + id + "']").text(response);
             }
         });
     }
 </script>
+
+}

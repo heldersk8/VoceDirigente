@@ -48,6 +48,9 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -215,12 +218,24 @@
     <Content Include="Interface\css\jogadores.css" />
     <Content Include="Interface\css\reset.css" />
     <Content Include="Interface\css\style.css" />
-    <Content Include="Interface\img\atacantes.jpg" />
-    <Content Include="Interface\img\atacantes.png" />
-    <Content Include="Interface\img\background.jpg" />
-    <Content Include="Interface\img\icone_curtir.svg" />
-    <Content Include="Interface\img\logo-flamengo.png" />
-    <Content Include="Interface\img\pato.png" />
+    <Content Include="Interface\img\atacantes.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\img\atacantes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\img\background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\img\icone_curtir.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\img\logo-flamengo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\img\pato.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Interface\css\campanhas.css.map" />
