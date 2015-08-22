@@ -27,7 +27,7 @@ namespace Dominio.Jogadores
 
         public virtual int PorcentagemBarraDeProgresso
         {
-            get { return (int) ((TotalDeDoacoes/ValorDoPasse)*100); }
+            get { return (int)((TotalDeDoacoes/ValorDoPasse)*100); }
         }
 
         protected Jogador() { }
