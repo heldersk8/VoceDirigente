@@ -36,6 +36,9 @@ body {
   font-size: 0;
   text-align: center; }
 
+.doacao, .likes, #SalvarDoacao, .fechar {
+  cursor: pointer; }
+
 header {
   background: rgba(0, 0, 0, 0.8);
   text-align: left;
@@ -43,13 +46,21 @@ header {
   width: 100%;
   z-index: 9;
   height: 50px; }
+  header .botao-voltar {
+    background: url(../img/icone-voltar.svg);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px; }
   header .logo-app {
     font-size: 16px;
     color: #fff;
     text-transform: uppercase;
     font-style: italic;
     padding: 10px;
-    display: block; }
+    display: inline-block;
+    vertical-align: middle; }
     header .logo-app .icone-app {
       background: url(../img/logo-app.svg);
       width: 30px;
@@ -272,6 +283,13 @@ h2 {
   to {
     bottom: 0; } }
 
+@-webkit-keyframes aparecer-modal {
+  from {
+    bottom: -100%; }
+
+  to {
+    bottom: 0; } }
+
 .modal {
   background: #fff;
   position: fixed;
@@ -280,7 +298,8 @@ h2 {
   width: 100%;
   padding: 30px;
   z-index: 999;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+  display: inline-block; }
   .modal.abrir-modal {
     -webkit-animation: aparecer-modal 1s ease 0s 1 normal;
     -webkit-animation-fill-mode: both;
@@ -296,7 +315,7 @@ h2 {
     background: url(../img/icone-fechar.svg); }
   .modal input[type=number] {
     border: 2px solid #930605;
-    font-size: 26px;
+    font-size: 20px;
     padding: 10px;
     width: 100%;
     border-radius: 0; }

@@ -78,11 +78,11 @@ namespace ODirigente.Controllers
             return Json(new { Mensagem = "Obrigado pela sua Doação!!!" });
         }
 
-        public JsonResult AtualizarDoacao()
+        public JsonResult AtualizarDoacao(int idJogador)
         {
-            var jogadores = _jogadorRepositorio.ObterTodos();
+            var jogador = _jogadorRepositorio.ObterPor(idJogador);
 
-            return Json(new { Jogadores = jogadores }, JsonRequestBehavior.AllowGet);
+            return Json(jogador, JsonRequestBehavior.AllowGet);
         }
 
     }

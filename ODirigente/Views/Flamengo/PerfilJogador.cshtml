@@ -3,29 +3,33 @@
 @{
     var jogador = @Model.Jogador;
     var dadosDaCarreira = @Model.DadosDaCarreira;
+    var id = "barra_" + jogador.Id;
+    var idArrecadacao = "arrecadacao_" + jogador.Id;
 }
 
 <div href="jogadores.html" class="perfil">
-    <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)"/>
+    @Html.HiddenFor(x => x.Jogador.Id)
+    <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)" />
     <h2>@jogador.Apelido</h2>
     <span class="escolha">
-            <small>Valor arrecadado</small>
-            <span>@String.Format("{0:C}", jogador.TotalDeDoacoes)</span>
-            <span class="barra-de-progresso">
-                <span class="barra-de-progresso__porcentagem"></span>
-            </span>
-            <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
+        <small>Valor arrecadado</small>
+        <span id="@idArrecadacao">@String.Format("{0:C}", jogador.TotalDeDoacoes)</span>
+        <span class="barra-de-progresso">
+
+            <span id="@id" class="barra-de-progresso__porcentagem"></span>
         </span>
+        <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
+    </span>
     <div class="likes" onclick="DaUmLike(@jogador.Id)">
         <span class="likes__curtir">
-                <span class="icone-curtir"></span>
-                <span>Curtir</span>
-                <strong name="@jogador.Id">@jogador.Likes</strong>
-            </span>
+            <span class="icone-curtir"></span>
+            <span>Curtir</span>
+            <strong name="@jogador.Id">@jogador.Likes</strong>
+        </span>
     </div>
     <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
-            Fazer doação
-        </span>
+        Fazer doação
+    </span>
 </div>
 
 <ul class="ficha">
@@ -61,7 +65,7 @@
 </ul>
 
 <ul class="ficha">
-    @foreach( var titulo in dadosDaCarreira.Titulos)
+    @foreach (var titulo in dadosDaCarreira.Titulos)
     {
         <li>
             <span>@titulo.NomeDoCampeonato</span>
@@ -73,9 +77,31 @@
 @section scripts {
     <script>
         $(document).ready(function () {
-            var percentual = @jogador.PorcentagemBarraDeProgresso + "%";
-            $(".barra-de-progresso__porcentagem").width(percentual);
+
+            setInterval(function () {
+                var data = { idJogador: $("#Jogador_Id").val() };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AtualizarDoacao", "Flamengo")',
+                    data: data,
+                    success: function (jogador) {
+                        var percentual = jogador.PorcentagemBarraDeProgresso + "%";
+                        AtualizarDoacao(percentual, jogador.Id);
+                        $("#arrecadacao_" + jogador.Id).text("R$ " + FormatarMoeda(jogador.TotalDeDoacoes));
+                        console.log($("#arrecadacao_" + jogador.Id));
+                    }
+                });
+
+            }, 4000);
+
+            AtualizarDoacao(@jogador.PorcentagemBarraDeProgresso);
         });
+
+
+        function AtualizarDoacao(percentualDeDoacao, idJogador) {
+            var percentual = percentualDeDoacao + "%";
+            $("#barra_" + idJogador).width(percentual);
+        }
 
         function DaUmLike(id) {
             var data = { zagueiroId: id };
@@ -87,6 +113,40 @@
                     $("[name='" + id + "']").text(response);
                 }
             });
+        }
+
+        function FormatarMoeda(valor) {
+
+            var inteiros = parseInt(parseInt(valor * (Math.pow(10, 2))) / parseFloat(Math.pow(10, 2)));
+            var centavos = parseInt(parseInt(valor * (Math.pow(10, 2))) % parseFloat(Math.pow(10, 2)));
+
+
+            if (centavos % 10 == 0 && centavos + "".length < 2) {
+                centavos = centavos + "0";
+            } else if (centavos < 10) {
+                centavos = "0" + centavos;
+            }
+
+            var milhares = parseInt(inteiros / 1000);
+            inteiros = inteiros % 1000;
+
+            var retorno = "";
+
+            if (milhares > 0) {
+                retorno = milhares + "." + retorno;
+                if (inteiros == 0) {
+                    inteiros = "000";
+                } else if (inteiros < 10) {
+                    inteiros = "00" + inteiros;
+                } else if (inteiros < 100) {
+                    inteiros = "0" + inteiros;
+                }
+            }
+            retorno += inteiros + "," + centavos;
+
+
+            return retorno;
+
         }
     </script>
 }
