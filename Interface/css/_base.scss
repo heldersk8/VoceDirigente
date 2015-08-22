@@ -1,0 +1,132 @@
+@import "_mixins";
+
+body {
+    background-color: $segunda-cor;
+    font-family: $fonte-principal;
+    font-size: 0;
+    text-align: center;
+}
+
+header {
+    background: rgba($terceira-cor, 0.8);
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    height: 50px;
+    
+    .logo-app {
+        font-size: 16px;
+        color: $branco;
+        text-transform: uppercase;
+        font-style: italic;
+        padding: 10px;
+        display: block;
+        
+        .icone-app {
+            background: url(../img/logo-app.svg);
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        
+        strong {
+            font-weight: 800;
+        }
+    }
+    
+    .escudo {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: $primeira-cor;
+        border: 2px solid $segunda-cor;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+        
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+section {
+    padding-top: 100px;
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: $fonte-principal;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $branco;
+    font-style: italic;
+    margin: 30px 0 10px;
+    letter-spacing: -0.05em;
+    border-bottom: 2px solid $branco;
+    display: block;
+    text-align: right;
+    padding: 10px 30px;
+    position: fixed;
+    top: 20px;
+    background: $segunda-cor;
+    z-index: 3;
+}
+
+h2 {
+    font-family: $fonte-principal;
+    letter-spacing: -0.05em;
+}
+
+.mensagem {
+    font-size: 14px;
+    color: $branco;
+    padding: 15px 20px;
+    background: rgba($terceira-cor, 0.8);
+    width: 95%;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    
+    big {
+        text-transform: uppercase;
+        color: $branco;
+        font-size: 40px;
+        display: block;
+        font-style: italic;
+        font-weight: 100;
+        margin-bottom: 15px;
+        z-index: 2;
+        position: relative;
+        text-shadow: 0px 5px 10px black;
+        font-weight: 800;
+    }
+    
+    small {
+        z-index: 2;
+        position: relative;
+        text-shadow: 0px 5px 10px black;
+    }
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: auto;
+        width: 100%;
+        min-height: 100%;
+    }
+}
