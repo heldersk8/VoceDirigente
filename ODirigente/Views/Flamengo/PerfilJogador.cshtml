@@ -29,23 +29,24 @@
 <ul class="ficha">
     <li>
         <span>Posição</span>
-        <span>Zagueiro</span>
+        <span>@jogador.Posicao</span>
     </li>
     <li>
         <span>Gols</span>
-        <span>150</span>
+        <span>@jogador.NumeroDeGols</span>
     </li>
     <li>
         <span>Desarmes</span>
-        <span>40</span>
+        <span>@jogador.Desarmes</span>
     </li>
     <li>
-        <span>Desarmes</span>
-        <span>40</span>
+        <span>Assistências</span>
+        <span>@jogador.Assistencias</span>
     </li>
     <li>
-        <span>Desarmes</span>
-        <span>40</span>
+        @{ var pe = jogador.EhCanhoto ? "Canhoto" : "Destro"; }
+        <span>Pé</span>
+        <span>@pe</span>
     </li>
 </ul>
 
