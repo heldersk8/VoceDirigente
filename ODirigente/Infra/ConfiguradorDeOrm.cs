@@ -25,7 +25,7 @@ namespace ODirigente.Infra
 
             const ServidorDePublicacao servidorDePublicacao = ServidorDePublicacao.Desenvolvimento;
 
-            Configurador.Configurar(new ConfiguradorDeSessionFactory(), servidorDePublicacao, true, true);
+            Configurador.Configurar(new ConfiguradorDeSessionFactory(), servidorDePublicacao);
         }
 
     }
