@@ -1,17 +1,19 @@
 ﻿@model ODirigente.ViewModels.JogadorPerfilVm
-
+@{
+    var jogador = @Model.Jogador;
+}
 <link rel="stylesheet" href="~/Interface/css/perfil.css">
-        
+ 
     <div href="jogadores.html" class="perfil">
         <img src="~/Interface/img/pato.png"/>
-        <h2>Alexandre Pato</h2>
+        <h2>@jogador.Nome</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
             <span>R$ 800.000,00</span>
             <span class="barra-de-progresso">
                 <span class="barra-de-progresso__porcentagem"></span>
             </span>
-            <small>Precisamos de R$ 14.800.000,00</small>
+            <small>Precisamos de @jogador.ValorDoPasse</small>
         </span>
         <div class="likes">
             <span class="likes__curtir">
