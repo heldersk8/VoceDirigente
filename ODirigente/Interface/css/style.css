@@ -36,6 +36,9 @@ body {
   font-size: 0;
   text-align: center; }
 
+.doacao, .likes, #SalvarDoacao, .fechar {
+  cursor: pointer; }
+
 header {
   background: rgba(0, 0, 0, 0.8);
   text-align: left;

@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.doacao, .likes, #SalvarDoacao, .fechar {
+    cursor: pointer;
+}
+
 header {
     background: rgba($terceira-cor, 0.8);
     text-align: left;
