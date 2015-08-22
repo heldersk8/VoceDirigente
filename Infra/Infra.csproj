@@ -104,7 +104,6 @@
     <Content Include="ScriptsDeJogadores\RonaldinhoGaucho.sql" />
     <Content Include="ScriptsDeJogadores\NeymarJunior.sql" />
     <Content Include="ScriptsDeJogadores\JeffersonOliveira.sql" />
-    <Content Include="ScriptsDeJogadores\LuizFelipe.sql" />
     <Content Include="ScriptsDeJogadores\GuilhermoOchoa.sql" />
     <Content Include="ScriptsDeJogadores\SergioRomero.sql" />
     <Content Include="ScriptsDeJogadores\DavidLuiz.sql" />
