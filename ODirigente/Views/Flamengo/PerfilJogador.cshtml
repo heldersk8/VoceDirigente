@@ -1,8 +1,8 @@
 ﻿@model ODirigente.ViewModels.JogadorPerfilVm
 @{
     var jogador = @Model.Jogador;
+    var dadosDaCarreira = @Model.DadosDaCarreira;
 }
-<link rel="stylesheet" href="~/Interface/css/perfil.css">
 
 <div href="jogadores.html" class="perfil">
     <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)"/>
@@ -15,22 +15,77 @@
             </span>
             <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
         </span>
-    <div class="likes">
+    <div class="likes" onclick="DaUmLike(@jogador.Id)">
         <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
-                <strong>1.5k</strong>
+                <strong name="@jogador.Id">@jogador.Likes</strong>
             </span>
     </div>
-    <span class="doacao">
+    <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
             Fazer doação
         </span>
 </div>
+
+<ul class="ficha">
+    <li>
+        <span>Clube Atual</span>
+        <span>@dadosDaCarreira.ClubeAtual</span>
+    </li>
+    <li>
+        <span>Posição</span>
+        <span>@jogador.Posicao</span>
+    </li>
+    <li>
+        <span>Gols</span>
+        <span>@jogador.NumeroDeGols</span>
+    </li>
+    <li>
+        <span>Desarmes</span>
+        <span>@jogador.Desarmes</span>
+    </li>
+    <li>
+        <span>Assistências</span>
+        <span>@jogador.Assistencias</span>
+    </li>
+    <li>
+        @{ var pe = jogador.EhCanhoto ? "Canhoto" : "Destro"; }
+        <span>Pé</span>
+        <span>@pe</span>
+    </li>
+</ul>
+
+<ul class="biografia">
+    @dadosDaCarreira.Biografia
+</ul>
+
+<ul class="ficha">
+    @foreach( var titulo in dadosDaCarreira.Titulos)
+    {
+        <li>
+            <span>@titulo.NomeDoCampeonato</span>
+            <span>@titulo.Ano</span>
+        </li>
+    }
+</ul>
+
 @section scripts {
     <script>
         $(document).ready(function () {
             var percentual = @jogador.PorcentagemBarraDeProgresso + "%";
             $(".barra-de-progresso__porcentagem").width(percentual);
         });
+
+        function DaUmLike(id) {
+            var data = { zagueiroId: id };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("LikeNaZagueirada")',
+                data: data,
+                success: function (response) {
+                    $("[name='" + id + "']").text(response);
+                }
+            });
+        }
     </script>
 }

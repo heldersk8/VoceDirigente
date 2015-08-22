@@ -150,3 +150,46 @@
         left: -25px;
     }
 }
+
+.ficha {
+    
+    width: 95%;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    margin: 15px auto;
+    
+    li {
+        background: rgba($terceira-cor, 0.5);
+        padding: 20px;
+        margin-bottom: 1px;
+        
+        span {
+            display: inline-block;
+            width: 48%;
+            vertical-align: middle;
+        }
+        
+        span:first-child {
+            color: $branco;
+        }
+        
+        span:last-child {
+            color: $primeira-cor;
+            font-weight: 800;
+        }
+    }
+}
+
+.biografia {
+    background: rgba($terceira-cor, 0.5);
+    padding: 20px;
+    width: 95%;
+    font-size: 16px;
+    text-align: center;
+    margin: 15px auto;
+    color: $branco;
+    text-align: left;
+    line-height: 1.2em;
+    font-weight: 100;
+}

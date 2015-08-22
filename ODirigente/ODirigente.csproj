@@ -215,7 +215,9 @@
     <Content Include="Interface\css\jogadores.scss" />
     <Content Include="Views\Flamengo\Campanhas.cshtml" />
     <None Include="Properties\PublishProfiles\odirigente %283%29.pubxml" />
-    <None Include="Views\Flamengo\Index.cshtml" />
+    <Content Include="Views\Flamengo\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Interface\css\campanhas.css" />
     <Content Include="Interface\css\jogadores.css" />
     <Content Include="Interface\css\reset.css" />

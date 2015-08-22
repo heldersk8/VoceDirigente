@@ -45,16 +45,137 @@ header {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: $primeira-cor;
+        background-color: $primeira-cor;
         border: 2px solid $segunda-cor;
         padding: 10px;
         border-radius: 50%;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+        margin-top: 5px;
+        margin-right: 5px;
         
-        img {
-            height: 100%;
-            width: auto;
+        &:hover{
+            
+           
+            
+
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+            -webkit-animation: infinite; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: 5; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 1s;
+            animation-iteration-count: 3;
         }
+        img {
+            height: 36px;
+            width: 31px;
+        }
+    }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    15%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    30% {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    45% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    60%  {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    75%  {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    100% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    15%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    30% {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    45% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    60%  {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    75%  {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    100% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
     }
 }
 
@@ -128,5 +249,111 @@ h2 {
         height: auto;
         width: 100%;
         min-height: 100%;
+    }
+}
+
+@keyframes aparecer-modal {
+    from { bottom: -100%; }
+    to { bottom: 0; }
+}
+
+.modal {
+    background: $branco;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    z-index: 999;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+    
+    &.abrir-modal {
+        -webkit-animation: aparecer-modal 1s ease 0s 1 normal;
+        -webkit-animation-fill-mode: both;
+        animation: aparecer-modal 1s ease 0s 1 normal;
+        animation-fill-mode: both;
+    }
+    
+    .fechar {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icone-fechar.svg);
+    }
+    
+    input[type=number] {
+        border: 2px solid $segunda-cor;
+        font-size: 26px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    input[type=submit] {
+        background: $terceira-cor;
+        color: $branco;
+        font-size: 20px;
+        padding: 10px;
+        width: 100%;
+        font-style: italic;
+        font-family: $fonte-principal;
+        text-transform: uppercase;
+        border: none;
+        margin-top: 15px;
+        border-radius: 0;
+    }
+}
+
+.beneficios {
+    .icone-camisa {
+        float: left;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: url(../img/icone-camisa.svg);
+        margin-right: 20px;
+    }
+    
+    .icone-estadio {
+        float: left;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: url(../img/icone-estadio.svg);
+        margin-right: 20px;
+    }
+    
+    .icone-treino {
+        float: left;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: url(../img/icone-treino.svg);
+        margin-right: 20px;
+    }
+    
+    li {
+        text-align: left;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+    
+    .valor-doacao {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 2px;
+        font-style: italic;
+        font-weight: 800;
+    }
+    
+    .beneficio {
+        font-size: 18px;
+        color: $primeira-cor;
+        font-style: italic;
+        text-transform: uppercase;
     }
 }
