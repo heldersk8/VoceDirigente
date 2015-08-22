@@ -66,5 +66,12 @@ namespace ODirigente.Controllers
 
             return Json(new { Mensagem = "Obrigado pela sua Doação!!!" });
         }
+
+        public JsonResult AtualizarDoacao()
+        {
+            var jogadores = _jogadorRepositorio.ObterTodos();
+
+            return Json(new { Jogadores = jogadores }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
