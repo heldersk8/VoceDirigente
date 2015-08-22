@@ -1,6 +1,6 @@
 ﻿@model ODirigente.ViewModels.JogadorPorPosicaoVm
 <link rel="stylesheet" href="~/interface/css/jogadores.css">
-<h1>Atacantes</h1>
+<h1>@Model.Jogadores.FirstOrDefault().Posicao</h1>
 
 @foreach (var jogador in Model.Jogadores)
 {

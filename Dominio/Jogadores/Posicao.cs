@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Dominio.Jogadores
+﻿namespace Dominio.Jogadores
 {
     public enum Posicao
     {
