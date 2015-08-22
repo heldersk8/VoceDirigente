@@ -24,7 +24,7 @@ namespace ODirigente.Controllers
         {
             var todos = new List<Jogador>();//_jogadorRepositorio.ObterTodos();
 
-            return View(todos);
+            return View();
         }
 
         public ActionResult JogadoresPorPosicao(int posicao)
