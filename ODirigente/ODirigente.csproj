@@ -221,6 +221,10 @@
     </Content>
     <Content Include="Interface\css\perfil.css.map" />
     <Content Include="Interface\css\perfil.scss" />
+    <Content Include="Interface\img\icone-camisa.svg" />
+    <Content Include="Interface\img\icone-estadio.svg" />
+    <Content Include="Interface\img\icone-fechar.svg" />
+    <Content Include="Interface\img\icone-treino.svg" />
     <Content Include="Views\Flamengo\Campanhas.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
