@@ -9,11 +9,13 @@ namespace ODirigente.Controllers
     {
         private readonly IJogadorRepositorio _jogadorRepositorio;
         private readonly IDoadorRepositorio _doadorRepositorio;
+        private readonly IDadosDaCarreiraRepositorio _dadosDaCarreiraRepositorio;
 
-        public FlamengoController(IJogadorRepositorio jogadorRepositorio, IDoadorRepositorio doadorRepositorio)
+        public FlamengoController(IJogadorRepositorio jogadorRepositorio, IDoadorRepositorio doadorRepositorio, IDadosDaCarreiraRepositorio dadosDaCarreiraRepositorio)
         {
             _jogadorRepositorio = jogadorRepositorio;
             _doadorRepositorio = doadorRepositorio;
+            _dadosDaCarreiraRepositorio = dadosDaCarreiraRepositorio;
         }
 
         public ActionResult Index()
@@ -59,7 +61,8 @@ namespace ODirigente.Controllers
         public ActionResult JogadorPerfil(int idDoJogador)
         {
             var jogadorPerfil = _jogadorRepositorio.ObterPor(idDoJogador);
-            var viewModel = new JogadorPerfilVm { Jogador = jogadorPerfil };
+            var dadosDaCarreira = _dadosDaCarreiraRepositorio.ObterPor(idDoJogador);
+            var viewModel = new JogadorPerfilVm { Jogador = jogadorPerfil, DadosDaCarreira = dadosDaCarreira };
 
             return View("PerfilJogador", viewModel);
         }
@@ -81,5 +84,6 @@ namespace ODirigente.Controllers
 
             return Json(new { Jogadores = jogadores }, JsonRequestBehavior.AllowGet);
         }
+
     }
 }

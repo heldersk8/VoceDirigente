@@ -1,6 +1,7 @@
 ﻿@model ODirigente.ViewModels.JogadorPerfilVm
 @{
     var jogador = @Model.Jogador;
+    var dadosDaCarreira = @Model.DadosDaCarreira;
 }
 
 <div href="jogadores.html" class="perfil">
@@ -28,6 +29,10 @@
 
 <ul class="ficha">
     <li>
+        <span>Clube Atual</span>
+        <span>@dadosDaCarreira.ClubeAtual</span>
+    </li>
+    <li>
         <span>Posição</span>
         <span>@jogador.Posicao</span>
     </li>
@@ -51,19 +56,17 @@
 </ul>
 
 <ul class="biografia">
-    Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-
+    @dadosDaCarreira.Biografia
 </ul>
 
 <ul class="ficha">
-    <li>
-        <span>Campeonato Brasileiro</span>
-        <span>2</span>
-    </li>
-    <li>
-        <span>UEFA</span>
-        <span>1</span>
-    </li>
+    @foreach( var titulo in dadosDaCarreira.Titulos)
+    {
+        <li>
+            <span>@titulo.NomeDoCampeonato</span>
+            <span>@titulo.Ano</span>
+        </li>
+    }
 </ul>
 
 @section scripts {
