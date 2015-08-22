@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doacoes\DoacaoTeste.cs" />
     <Compile Include="Helpers\AssertExtensions.cs" />
     <Compile Include="Helpers\Extensions\ExtensoesDeTiposGenericos.cs" />
     <Compile Include="Jogadores\JogadorTeste.cs" />

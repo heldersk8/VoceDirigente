@@ -1,4 +1,6 @@
-﻿using Dominio.Comum;
+﻿using System.ComponentModel.DataAnnotations;
+using Dominio.Comum;
+using Dominio.Validacao;
 
 namespace Dominio.Doacoes
 {
@@ -11,8 +13,14 @@ namespace Dominio.Doacoes
 
         public Doacao(Doador doador, decimal valor)
         {
+            Validar(valor);
             Doador = doador;
             Valor = valor;
+        }
+
+        private void Validar(decimal valor)
+        {
+            Validacao<Doacao>.Quando(valor < 0, "Valor inválido");
         }
     }
 }
