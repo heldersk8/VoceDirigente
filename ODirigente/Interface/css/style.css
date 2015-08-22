@@ -46,13 +46,21 @@ header {
   width: 100%;
   z-index: 9;
   height: 50px; }
+  header .botao-voltar {
+    background: url(../img/icone-voltar.svg);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px; }
   header .logo-app {
     font-size: 16px;
     color: #fff;
     text-transform: uppercase;
     font-style: italic;
     padding: 10px;
-    display: block; }
+    display: inline-block;
+    vertical-align: middle; }
     header .logo-app .icone-app {
       background: url(../img/logo-app.svg);
       width: 30px;
@@ -307,7 +315,7 @@ h2 {
     background: url(../img/icone-fechar.svg); }
   .modal input[type=number] {
     border: 2px solid #930605;
-    font-size: 26px;
+    font-size: 20px;
     padding: 10px;
     width: 100%;
     border-radius: 0; }

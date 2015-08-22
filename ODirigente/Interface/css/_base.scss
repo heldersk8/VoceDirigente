@@ -18,6 +18,15 @@ header {
     width: 100%;
     z-index: 9;
     height: 50px;
+
+    .botao-voltar {
+        background: url(../img/icone-voltar.svg);
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+    }
     
     .logo-app {
         font-size: 16px;
@@ -25,7 +34,8 @@ header {
         text-transform: uppercase;
         font-style: italic;
         padding: 10px;
-        display: block;
+        display: inline-block;
+        vertical-align: middle;
         
         .icone-app {
             background: url(../img/logo-app.svg);
@@ -299,7 +309,7 @@ h2 {
     
     input[type=number] {
         border: 2px solid $segunda-cor;
-        font-size: 26px;
+        font-size: 20px;
         padding: 10px;
         width: 100%;
         border-radius: 0;
