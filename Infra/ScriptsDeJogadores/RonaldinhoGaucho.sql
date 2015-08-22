@@ -1,5 +1,5 @@
 INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Ronaldinho Gaúcho', 'Ronaldo de Assis Moreira', '19800321', 5, 305, 0, 163, 180, 0)
+VALUES('Ronaldinho Gaúcho', 'Ronaldo de Assis Moreira', '19800321', 4, 305, 0, 163, 180, 0)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();

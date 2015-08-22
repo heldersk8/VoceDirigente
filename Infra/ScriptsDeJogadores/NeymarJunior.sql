@@ -1,5 +1,5 @@
 INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Neymar Júnior', 'Neymar da Silva Santos Júnior', '19920205', 6, 196, 0, 88, 175, 0)
+VALUES('Neymar Júnior', 'Neymar da Silva Santos Júnior', '19920205', 5, 196, 0, 88, 175, 0)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();

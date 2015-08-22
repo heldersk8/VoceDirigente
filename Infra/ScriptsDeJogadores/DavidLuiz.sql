@@ -1,5 +1,5 @@
 INSERT INTO Jogador (Apelido, Altura,Assistencias,DataDeNascimento,Desarmes, ehcanhoto,Nome,NumeroDeGols,Posicao)
-VALUES  ('David Luiz', 189,4,'19870422',80,0,'David Luiz',5, 2)
+VALUES  ('David Luiz', 189,4,'19870422',80,0,'David Luiz',4, 2)
 
 DECLARE @IdJogador INT
 SET @IdJogador = SCOPE_IDENTITY();

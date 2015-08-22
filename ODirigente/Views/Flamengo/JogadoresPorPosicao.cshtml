@@ -5,27 +5,27 @@
 @foreach (var jogador in Model.Jogadores)
 {
     @Html.HiddenFor(model => jogador.Id)
-    <a href="#" class="jogadores">
-        <h2>@jogador.Apelido</h2>
+    <div class="jogadores">
+        <a href="#">
+            <h2>@jogador.Apelido</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
             @jogador.ValorDoPasse
         </span>
+            <span class="doacao">
+                Fazer doação
+            </span>
+            <img src="~/Interface/img/pato.png" />
+        </a>
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
-                <strong class="jogador_likes">@jogador.Likes</strong>
+                <strong>@jogador.Likes</strong>
             </span>
         </div>
-        <span class="doacao">
-            Fazer doação
-        </span>
-        <img src="~/Interface/img/pato.png" />
-    </a>
+    </div>
 }
-
-<button onclick="AtualizarLikes(1)">Atualizar like 1</button>
 
 <script>
     function DaUmLike(id) {
@@ -39,22 +39,7 @@
         });
     }
 
-
-    function AtualizarLikes(id) {
-        alert("chamou o atualizador");
-        $.ajax({
-            type: "POST",
-            url: '@Url.Action("AtualizarLikes")',
-            data: data,
-            success: function(response) {
-                alert("foi?");
-                
-                $("#jogador_Id .jogador_likes").val(response) ;
-                alert("foi!!!!");
-                
-                alert(response);
-            }
-        });
-    }
-
+    setInterval(function () {
+        console.log("Teste");
+    }, 1000);
 </script>
