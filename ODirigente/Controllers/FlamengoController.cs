@@ -2,7 +2,6 @@ using Dominio.Doacoes;
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
 using System.Web.Mvc;
-using Dominio.Jogadores;
 
 namespace ODirigente.Controllers
 {
@@ -56,16 +55,14 @@ namespace ODirigente.Controllers
             var jogadorPerfil = _jogadorRepositorio.ObterPor(idDoJogador);
             var viewModel = new JogadorPerfilVm { Jogador = jogadorPerfil };
 
-            return View("PerfilJogador",viewModel);
+            return View("PerfilJogador", viewModel);
         }
 
         public JsonResult Doar(decimal valorDaDoacao, int idJogador)
         {
             var jogador = _jogadorRepositorio.ObterPor(idJogador);
             var doador = _doadorRepositorio.ObterPor(1);
-            var doacao = new Doacao(jogador, doador, valorDaDoacao);
-
-            _doacaoRepositorio.Salvar(doacao);
+            var doacao = new Doacao(doador, valorDaDoacao);
 
             return Json(new { Mensagem = "Obrigado pela sua Doação!!!" });
         }

@@ -1,7 +1,7 @@
 ﻿using Dominio.Comum;
+using Dominio.Doacoes;
 using System;
 using System.Collections.Generic;
-using Dominio.Doacoes;
 
 namespace Dominio.Jogadores
 {
