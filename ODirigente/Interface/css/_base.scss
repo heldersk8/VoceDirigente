@@ -45,16 +45,137 @@ header {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: $primeira-cor;
+        background-color: $primeira-cor;
         border: 2px solid $segunda-cor;
         padding: 10px;
         border-radius: 50%;
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+        margin-top: 5px;
+        margin-right: 5px;
         
-        img {
-            height: 100%;
-            width: auto;
+        &:hover{
+            
+           
+            
+
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+            -webkit-animation: infinite; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: 5; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 1s;
+            animation-iteration-count: 3;
         }
+        img {
+            height: 36px;
+            width: 31px;
+        }
+    }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    15%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    30% {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    45% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    60%  {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    75%  {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    100% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    15%   {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    30% {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    45% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    60%  {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    75%  {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    100% {
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 5px;
     }
 }
 
