@@ -27,7 +27,5 @@
         </span>
     </div>
 <script>
-    $(document).ready(function() {
-        $(".barra-de-progresso__porcentagem").width('100%');
-    });
+    $(".barra-de-progresso__porcentagem").width(@string.Format("{0}%", jogador.PorcentagemBarraDeProgresso));
 </script>
