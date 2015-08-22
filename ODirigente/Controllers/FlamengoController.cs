@@ -47,12 +47,12 @@ namespace ODirigente.Controllers
             return Json(numeroDelikes);
         }
 
-        public ActionResult JogadorPorId(int idDoJogador)
+        public ActionResult JogadorPerfil(int idDoJogador)
         {
-            var jogadorPorId = _jogadorRepositorio.ObterPor(idDoJogador);
-            var viewModel = new JogadorPerfilVm { Jogador = jogadorPorId};
+            var jogadorPerfil = _jogadorRepositorio.ObterPor(idDoJogador);
+            var viewModel = new JogadorPerfilVm { Jogador = jogadorPerfil };
 
-            return View(viewModel);
+            return View("PerfilJogador",viewModel);
         }
 
     }
