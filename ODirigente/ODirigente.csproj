@@ -247,7 +247,7 @@
     <Content Include="Interface\img\5.png" />
     <Content Include="Interface\img\6.png" />
     <Content Include="Interface\img\7.png" />
-    <Content Include="Interface\img\atacante.png" />
+    <Content Include="Interface\img\Atacante.png" />
     <Content Include="Interface\img\atacantes.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -259,23 +259,23 @@
     </Content>
     <Content Include="Interface\img\dante.png" />
     <Content Include="Interface\img\felipao.png" />
-    <Content Include="Interface\img\goleiro.png" />
+    <Content Include="Interface\img\Goleiro.png" />
     <Content Include="Interface\img\icone_curtir.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Interface\img\jogador.png" />
-    <Content Include="Interface\img\lateral.png" />
+    <Content Include="Interface\img\Laterais.png" />
     <Content Include="Interface\img\logo-app.svg" />
     <Content Include="Interface\img\logo-flamengo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Interface\img\meiocampo.png" />
+    <Content Include="Interface\img\Meia.png" />
     <Content Include="Interface\img\pato.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Interface\img\sergioramos.png" />
     <Content Include="Interface\img\tecnico.png" />
-    <Content Include="Interface\img\zagueiro.png" />
+    <Content Include="Interface\img\Zagueiro.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Interface\css\campanhas.css.map" />
