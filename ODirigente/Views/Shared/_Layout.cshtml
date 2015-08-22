@@ -12,7 +12,7 @@
         <span class="escudo">
             <img src="~/interface/img/logo-flamengo.png" />
         </span>
-        <span class="logo-app"><span class="icone-app"> </span> O<strong>Dirigente</strong></span>
+        @*<span class="logo-app"><span class="icone-app"> </span> O<strong>Dirigente</strong></span>*@
     </header>
     <section>
         @RenderBody()
@@ -22,3 +22,29 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<div id="divDoacao" style="display: none">
+    <input id="IdJogador" type="hidden" />
+    <input id="Doacao" type="text">
+    <input id="SalvarDoacao" onclick="SalvarDoacao();" type="button">
+</div>
+
+<script>
+    function SalvarDoacao() {
+        var valorDaDoacao = parseFloat($("#Doacao").val());
+        var data = { valorDaDoacao: valorDaDoacao, idJogador: $("#IdJogador").val() };
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Doar", "Flamengo")',
+            data: data,
+            success: function () {
+                $("#divDoacao").hide();
+            }
+        });
+    }
+
+    function AbriDoacao(idJogador) {
+        $("#IdJogador").val(idJogador);
+        $("#divDoacao").dialog({ title: "Doação" });
+    }
+</script>
