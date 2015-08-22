@@ -41,8 +41,8 @@
                 </li>
             </ul>
             <input id="IdJogador" type="hidden" />
-            <input id="Doacao" type="number" placeholder="Digite o valor">
-            <input id="SalvarDoacao" onclick="SalvarDoacao();" value="Doar" type="submit">
+            <input id="Doacao" type="number" class="money" placeholder="Digite o valor"/>
+            <input id="SalvarDoacao" onclick=" SalvarDoacao(); " value="Doar" type="submit"/>
         </div>
     </section>
     @Scripts.Render("~/bundles/jquery")
@@ -52,6 +52,10 @@
 </html>
 
 <script>
+    $(document).ready(function() {
+        $('.money', form).autoNumeric({ mDec: '2', vMax: '999999999999999.99', aSep: '.', aDec: ',', aForm: true });
+    });
+
     function AbriDoacao(idJogador) {
         $("#IdJogador").val(idJogador);
         $("#divDoacao").addClass("modal abrir-modal");
@@ -64,6 +68,7 @@
     }
 
     function SalvarDoacao() {
+        console.log(parseFloat($("#Doacao").val()));
         var valorDaDoacao = parseFloat($("#Doacao").val());
         var data = { valorDaDoacao: valorDaDoacao, idJogador: $("#IdJogador").val() };
         $.ajax({
