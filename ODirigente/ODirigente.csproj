@@ -215,6 +215,8 @@
     <Content Include="Interface\css\jogadores copy.css" />
     <Content Include="Interface\css\jogadores.css.map" />
     <Content Include="Interface\css\jogadores.scss" />
+    <Content Include="Scripts\autoNumeric.js" />
+    <Content Include="Views\Flamengo\Campanhas.cshtml" />
     <Content Include="Interface\css\perfil.css" />
     <Content Include="Interface\css\style.min.css">
       <DependentUpon>style.css</DependentUpon>
