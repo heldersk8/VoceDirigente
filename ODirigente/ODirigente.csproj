@@ -215,12 +215,17 @@
     <Content Include="Interface\css\jogadores copy.css" />
     <Content Include="Interface\css\jogadores.css.map" />
     <Content Include="Interface\css\jogadores.scss" />
+    <Content Include="Interface\css\perfil.css" />
     <Content Include="Interface\css\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
     <Content Include="Interface\css\perfil.css.map" />
     <Content Include="Interface\css\perfil.scss" />
-    <Content Include="Views\Flamengo\Campanhas.cshtml" />
+    <Content Include="Views\Flamengo\Campanhas.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interface\css\jogadores copy.css.map" />
+    <Content Include="Interface\css\campanhas copy.css.map" />
     <None Include="Properties\PublishProfiles\odirigente %283%29.pubxml" />
     <Content Include="Views\Flamengo\Index.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -288,7 +293,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Views\Flamengo\PerfilJogador.cshtml" />
+    <Content Include="Views\Flamengo\PerfilJogador.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -322,7 +329,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Zagueiro\Index.cshtml" />
-    <Content Include="Views\Flamengo\JogadoresPorPosicao.cshtml" />
+    <Content Include="Views\Flamengo\JogadoresPorPosicao.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
