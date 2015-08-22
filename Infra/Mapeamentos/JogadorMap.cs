@@ -7,18 +7,19 @@ namespace Infra.Mapeamentos
     {
         public JogadorMap()
         {
-            Map(x => x.Altura);
-            Map(x => x.Assistencias);
-            Map(x => x.DataDeNascimento);
-            Map(x => x.Desarmes);
-            Map(x => x.EhCanhoto);
-            Map(x => x.Apelido);
-            Map(x => x.Nome);
-            Map(x => x.NumeroDeGols);
-            Map(x => x.Posicao);
-            Map(x => x.ValorDoPasse);
-            Map(x => x.Likes);
-            Map(x => x.Dislikes);
+            Map(jogador => jogador.Altura);
+            Map(jogador => jogador.Assistencias);
+            Map(jogador => jogador.DataDeNascimento);
+            Map(jogador => jogador.Desarmes);
+            Map(jogador => jogador.EhCanhoto);
+            Map(jogador => jogador.Apelido);
+            Map(jogador => jogador.Nome);
+            Map(jogador => jogador.NumeroDeGols);
+            Map(jogador => jogador.Posicao);
+            Map(jogador => jogador.ValorDoPasse);
+            Map(jogador => jogador.Likes);
+            Map(jogador => jogador.Dislikes);
+            HasMany(x => x.Doacoes).Cascade.AllDeleteOrphan();
         }
     }
 }
