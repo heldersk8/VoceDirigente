@@ -213,6 +213,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Interface\css\jogadores.css.map" />
     <Content Include="Interface\css\jogadores.scss" />
+    <Content Include="Views\Flamengo\Campanhas.cshtml" />
+    <None Include="Properties\PublishProfiles\odirigente %283%29.pubxml" />
     <None Include="Views\Flamengo\Index.cshtml" />
     <Content Include="Interface\css\campanhas.css" />
     <Content Include="Interface\css\jogadores.css" />
