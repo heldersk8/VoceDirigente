@@ -10,7 +10,7 @@ namespace ODirigente.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Index","Flamengo");
+            return View();
         }
 
         //public ActionResult About()
