@@ -16,18 +16,17 @@
     </header>
     <section>
         @RenderBody()
+        <div id="divDoacao" style="display: none">
+            <input id="IdJogador" type="hidden" />
+            <input id="Doacao" type="text">
+            <input id="SalvarDoacao" onclick="SalvarDoacao();" type="button">
+        </div>
     </section>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
-
-<div id="divDoacao" style="display: none">
-    <input id="IdJogador" type="hidden" />
-    <input id="Doacao" type="text">
-    <input id="SalvarDoacao" onclick="SalvarDoacao();" type="button">
-</div>
 
 <script>
     function SalvarDoacao() {
@@ -45,6 +44,7 @@
 
     function AbriDoacao(idJogador) {
         $("#IdJogador").val(idJogador);
-        $("#divDoacao").dialog({ title: "Doação" });
+        $("#divDoacao").addClass("abrir-modal");
+        $("#divDoacao").show();
     }
 </script>
