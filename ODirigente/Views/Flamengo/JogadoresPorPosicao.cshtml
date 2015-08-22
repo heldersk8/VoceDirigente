@@ -4,7 +4,9 @@
 
 @foreach (var jogador in Model.Jogadores)
 {
-    <div class="jogadores">
+    var id = string.Format("div{0}", jogador.Id);
+
+    <div class="jogadores" id="@id">
         <a href="@Url.Action("JogadorPerfil", new { idDoJogador=jogador.Id })">
             <h2>@jogador.Apelido</h2>
         <span class="escolha">
