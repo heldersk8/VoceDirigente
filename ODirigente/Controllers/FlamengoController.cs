@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using Dominio.Doacoes;
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
 using System.Web.Mvc;
+using Dominio.Jogadores;
 
 namespace ODirigente.Controllers
 {
@@ -20,7 +22,7 @@ namespace ODirigente.Controllers
 
         public ActionResult Index()
         {
-            var todos = _jogadorRepositorio.ObterTodos();
+            var todos = new List<Jogador>();//_jogadorRepositorio.ObterTodos();
 
             return View(todos);
         }
