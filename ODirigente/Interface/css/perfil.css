@@ -157,4 +157,42 @@
     bottom: 0;
     left: -25px; }
 
+/* line 154, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+.ficha {
+  width: 95%;
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+  margin: 15px auto; }
+  /* line 162, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .ficha li {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 1px; }
+    /* line 167, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .ficha li span {
+      display: inline-block;
+      width: 48%;
+      vertical-align: middle; }
+    /* line 173, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .ficha li span:first-child {
+      color: #fff; }
+    /* line 177, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .ficha li span:last-child {
+      color: #fc0d08;
+      font-weight: 800; }
+
+/* line 184, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+.biografia {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 95%;
+  font-size: 16px;
+  text-align: center;
+  margin: 15px auto;
+  color: #fff;
+  text-align: left;
+  line-height: 1.2em;
+  font-weight: 100; }
+
 /*# sourceMappingURL=perfil.css.map */
