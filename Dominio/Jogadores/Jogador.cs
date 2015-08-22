@@ -2,6 +2,7 @@
 using Dominio.Doacoes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Dominio.Jogadores
 {
@@ -21,7 +22,13 @@ namespace Dominio.Jogadores
         public virtual decimal ValorDoPasse { get; set; }
         public virtual int Likes { get; set; }
         public virtual int Dislikes { get; set; }
+        public virtual decimal TotalDeDoacoes { get { return Doacoes.Sum(x => x.Valor); } }
         public virtual IEnumerable<Doacao> Doacoes { get { return _doacoes; } }
+
+        public virtual int PorcentagemBarraDeProgresso
+        {
+            get { return (int)((TotalDeDoacoes/ValorDoPasse)*100); }
+        }
 
         protected Jogador() { }
 

@@ -64,7 +64,16 @@ namespace ODirigente.Controllers
             var doador = _doadorRepositorio.ObterPor(1);
             var doacao = new Doacao(doador, valorDaDoacao);
 
+            jogador.Efetuar(doacao);
+
             return Json(new { Mensagem = "Obrigado pela sua Doação!!!" });
+        }
+
+        public JsonResult AtualizarDoacao()
+        {
+            var jogadores = _jogadorRepositorio.ObterTodos();
+
+            return Json(new { Jogadores = jogadores }, JsonRequestBehavior.AllowGet);
         }
     }
 }
