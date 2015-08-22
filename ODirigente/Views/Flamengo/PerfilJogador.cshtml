@@ -15,11 +15,11 @@
             </span>
             <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
         </span>
-    <div class="likes">
+    <div class="likes" onclick="DaUmLike(@jogador.Id)">
         <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
-                <strong>1.5k</strong>
+                <strong name="@jogador.Id">@jogador.Likes</strong>
             </span>
     </div>
     <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
@@ -75,5 +75,17 @@
             var percentual = @jogador.PorcentagemBarraDeProgresso + "%";
             $(".barra-de-progresso__porcentagem").width(percentual);
         });
+
+        function DaUmLike(id) {
+            var data = { zagueiroId: id };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("LikeNaZagueirada")',
+                data: data,
+                success: function (response) {
+                    $("[name='" + id + "']").text(response);
+                }
+            });
+        }
     </script>
 }
