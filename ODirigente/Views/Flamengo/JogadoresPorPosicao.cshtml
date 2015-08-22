@@ -11,7 +11,7 @@
             <h2>@jogador.Apelido</h2>
             <span class="escolha">
                 <small>Valor arrecadado</small>
-                @String.Format("{0:C}", @jogador.ValorDoPasse)
+                @String.Format("{0:C}", @jogador.Doacoes.Sum(doacao => doacao.Valor))
             </span>
             <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)" />
         </a>
