@@ -169,17 +169,19 @@ h2 {
 .modal {
   background: #fff;
   position: fixed;
-  bottom: 0px;
+  bottom: -100%;
   left: 0;
   width: 100%;
   padding: 30px;
   z-index: 999;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
-  -webkit-animation: aparecer-modal 1s ease 0s 1 normal;
-  -webkit-animation-fill-mode: both;
-  animation: aparecer-modal 1s ease 0s 1 normal;
-  animation-fill-mode: both; }
-  /* line 153, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4); }
+  /* line 149, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  .modal.abrir-modal {
+    -webkit-animation: aparecer-modal 1s ease 0s 1 normal;
+    -webkit-animation-fill-mode: both;
+    animation: aparecer-modal 1s ease 0s 1 normal;
+    animation-fill-mode: both; }
+  /* line 156, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
   .modal .fechar {
     position: absolute;
     top: 15px;
@@ -188,14 +190,14 @@ h2 {
     width: 20px;
     height: 20px;
     background: url(../img/icone-fechar.svg); }
-  /* line 163, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  /* line 166, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
   .modal input[type=number] {
     border: 2px solid #930605;
     font-size: 26px;
     padding: 10px;
     width: 100%;
     border-radius: 0; }
-  /* line 171, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+  /* line 174, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
   .modal input[type=submit] {
     background: #000;
     color: #fff;
@@ -209,7 +211,7 @@ h2 {
     margin-top: 15px;
     border-radius: 0; }
 
-/* line 187, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 190, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios .icone-camisa {
   float: left;
   width: 40px;
@@ -218,7 +220,7 @@ h2 {
   background: url(../img/icone-camisa.svg);
   margin-right: 20px; }
 
-/* line 196, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 199, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios .icone-estadio {
   float: left;
   width: 40px;
@@ -227,7 +229,7 @@ h2 {
   background: url(../img/icone-estadio.svg);
   margin-right: 20px; }
 
-/* line 205, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 208, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios .icone-treino {
   float: left;
   width: 40px;
@@ -236,14 +238,14 @@ h2 {
   background: url(../img/icone-treino.svg);
   margin-right: 20px; }
 
-/* line 214, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 217, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios li {
   text-align: left;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
   margin-bottom: 20px; }
 
-/* line 221, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 224, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios .valor-doacao {
   font-size: 16px;
   display: block;
@@ -251,7 +253,7 @@ h2 {
   font-style: italic;
   font-weight: 800; }
 
-/* line 229, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
+/* line 232, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_base.scss */
 .beneficios .beneficio {
   font-size: 18px;
   color: #fc0d08;
