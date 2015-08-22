@@ -6,7 +6,7 @@
 {
     @Html.HiddenFor(model => jogador.Id)
     <div class="jogadores">
-        <a href="@Url.Action("JogadorPerfil", new { jogador.Id })">
+        <a href="@Url.Action("JogadorPerfil", new { idDoJogador=jogador.Id })">
             <h2>@jogador.Apelido</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
@@ -15,7 +15,7 @@
             <span class="doacao">
                 Fazer doação
             </span>
-            <img src="~/Interface/img/pato.png" />
+            <img src="~/Interface/img/"@string.Format("{0}.png", jogador.Id) />
         </a>
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
