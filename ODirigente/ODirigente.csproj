@@ -213,7 +213,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Interface\css\jogadores.css.map" />
     <Content Include="Interface\css\jogadores.scss" />
-    <None Include="Views\flamengo\Index.cshtml" />
+    <None Include="Views\Flamengo\Index.cshtml" />
     <Content Include="Interface\css\campanhas.css" />
     <Content Include="Interface\css\jogadores.css" />
     <Content Include="Interface\css\reset.css" />
@@ -277,7 +277,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Views\flamengo\PerfilJogador.cshtml" />
+    <None Include="Views\Flamengo\PerfilJogador.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -311,7 +311,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Zagueiro\Index.cshtml" />
-    <Content Include="Views\flamengo\JogadoresPorPosicao.cshtml" />
+    <Content Include="Views\Flamengo\JogadoresPorPosicao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
