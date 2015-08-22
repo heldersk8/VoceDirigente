@@ -15,6 +15,5 @@ namespace Infra.Repositorios.Dominio
         {
             return Entidades().Where(jogador => jogador.Posicao == (Posicao)posicao);
         }
-
     }
 }
