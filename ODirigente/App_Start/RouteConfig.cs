@@ -11,8 +11,8 @@ namespace ODirigente
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.IgnoreRoute("{Services}/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("{Services}/{*pathInfo}");
 
             routes.MapRoute(
                 name: "Default",
