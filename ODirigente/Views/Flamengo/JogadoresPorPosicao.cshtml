@@ -1,4 +1,4 @@
-﻿@model ODirigente.ViewModels.JogadorPerfilVm
+﻿@model ODirigente.ViewModels.JogadorPorPosicaoVm
 <link rel="stylesheet" href="~/interface/css/jogadores.css">
 <h1>Atacantes</h1>
 
@@ -6,7 +6,7 @@
 {
     @Html.HiddenFor(model => jogador.Id)
     <div class="jogadores">
-        <a href="@Url.Action("JogadorPorId", new { jogador.id })">
+        <a href="@Url.Action("JogadorPorId", new { jogador.Id })">
             <h2>@jogador.Apelido</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
