@@ -3,29 +3,34 @@
     var jogador = @Model.Jogador;
 }
 <link rel="stylesheet" href="~/Interface/css/perfil.css">
- 
-    <div href="jogadores.html" class="perfil">
-        <img src="~/Interface/img/"@string.Format("{0}.png", jogador.Id)/>
-        <h2>@jogador.Apelido</h2>
-        <span class="escolha">
+
+<div href="jogadores.html" class="perfil">
+    <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)"/>
+    <h2>@jogador.Apelido</h2>
+    <span class="escolha">
             <small>Valor arrecadado</small>
-            <span>@jogador.TotalDeDoacoes</span>
+            <span>@String.Format("{0:C}", jogador.TotalDeDoacoes)</span>
             <span class="barra-de-progresso">
                 <span class="barra-de-progresso__porcentagem"></span>
             </span>
-            <small>Precisamos de @jogador.ValorDoPasse</small>
+            <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
         </span>
-        <div class="likes">
-            <span class="likes__curtir">
+    <div class="likes">
+        <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
                 <strong>1.5k</strong>
             </span>
-        </div>
-        <span class="doacao">
+    </div>
+    <span class="doacao">
             Fazer doação
         </span>
-    </div>
-<script>
-    $(".barra-de-progresso__porcentagem").width(@string.Format("{0}%", jogador.PorcentagemBarraDeProgresso));
-</script>
+</div>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var percentual = @jogador.PorcentagemBarraDeProgresso + "%";
+            $(".barra-de-progresso__porcentagem").width(percentual);
+        });
+    </script>
+}
