@@ -15,7 +15,7 @@
             <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
-                <strong>@jogador.Likes</strong>
+                <strong class="jogador_likes">@jogador.Likes</strong>
             </span>
         </div>
         <span class="doacao">
@@ -24,6 +24,8 @@
         <img src="~/Interface/img/pato.png" />
     </a>
 }
+
+<button onclick="AtualizarLikes(1)">Atualizar like 1</button>
 
 <script>
     function DaUmLike(id) {
@@ -36,4 +38,23 @@
             success: function (response) { alert(response); }
         });
     }
+
+
+    function AtualizarLikes(id) {
+        alert("chamou o atualizador");
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("AtualizarLikes")',
+            data: data,
+            success: function(response) {
+                alert("foi?");
+                
+                $("#jogador_Id .jogador_likes").val(response) ;
+                alert("foi!!!!");
+                
+                alert(response);
+            }
+        });
+    }
+
 </script>

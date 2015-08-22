@@ -38,5 +38,13 @@ namespace ODirigente.Controllers
 
             return Json(zagueiro.Likes);
         }
+
+        public JsonResult AtualizarLikes(int zagueiroId)
+        {
+            var numeroDelikes = _jogadorRepositorio.ObterPor(zagueiroId).Likes;
+
+            return Json(numeroDelikes);
+        }
+
     }
 }
