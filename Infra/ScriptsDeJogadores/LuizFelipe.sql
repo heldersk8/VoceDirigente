@@ -1,5 +1,5 @@
-INSERT INTO Jogador (Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Luiz Felipe Ventura dos Santos', '19840222', 1, 0, 0, 0, 191, 0)
+INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
+VALUES('Felipe', 'Luiz Felipe Ventura dos Santos', '19840222', 1, 0, 0, 0, 191, 0)
 GO
 INSERT INTO dadosDaCarreira(Biografia,ClubeAtual,idjogador) VALUES 
 ('Luiz Felipe Ventura dos Santos, mais conhecido apenas como Felipe (Rio de Janeiro, 22 de fevereiro de 1984), é um futebolista brasileiro que joga como goleiro. Atualmente, joga pelo Figueirense.', 12, SCOPE_IDENTITY())

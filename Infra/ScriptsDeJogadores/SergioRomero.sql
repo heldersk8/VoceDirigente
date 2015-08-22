@@ -1,5 +1,8 @@
-INSERT INTO Jogador (Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
-VALUES('Sergio Germán Romero', '19870222', 1, 0, 0, 0, 192, 0)
+INSERT INTO Jogador (Apelido, Nome, DataDeNascimento, Posicao, NumeroDeGols, Desarmes, Assistencias, Altura, EhCanhoto)
+VALUES('Sergio Romero', 'Sergio Germán Romero', '19870222', 1, 0, 0, 0, 192, 0)
+
+DECLARE @IdJogador INT
+SET @IdJogador = SCOPE_IDENTITY();
 
 INSERT INTO dadosDaCarreira(Biografia,ClubeAtual,idjogador) VALUES 
 ('Sergio Germán Romero é um futebolista argentino que atua como goleiro. Defende atualmente o Manchester United. Mesmo a Sampdoria tendo sido rebaixada na temporada de 2010–11 a Serie B, foi anunciada sua transferência para a mesma em 22 de agosto de 2011. Em 17 de agosto de 2013, foi cedido por empréstimo de um ano, com opção de compra, para o Monaco. Foi contratado pelo Manchester United em 26 de julho de 2015 para três temporadas.', 11, SCOPE_IDENTITY())
