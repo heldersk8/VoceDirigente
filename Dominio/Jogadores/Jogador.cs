@@ -1,6 +1,7 @@
 ﻿using Dominio.Comum;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Dominio.Doacoes;
 
 namespace Dominio.Jogadores
@@ -20,7 +21,7 @@ namespace Dominio.Jogadores
         public virtual int Likes { get; set; }
         public virtual int Dislikes { get; set; }
         public virtual IEnumerable<Doacao> Doacoes { get; set; }
-
+        public virtual decimal TotalDeDoacoes { get { return Doacoes.Sum(x => x.Valor); } }
         protected Jogador() { }
 
         public Jogador(string apelido, string nome, DateTime dataDeNascimento, Posicao posicao, int numeroDeGols, int assistencias, int desarmes, int altura, bool ehCanhoto)
