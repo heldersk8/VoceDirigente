@@ -18,7 +18,7 @@
         <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
                 Fazer doação
             </span>
-        <img src="~/Interface/img/" @string.Format("{0}.png", jogador.Id) />
+        <img src="~/Interface/img/@string.Format("{0}.png", jogador.Id)" />
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
                 <span class="icone-curtir"></span>
@@ -31,13 +31,24 @@
 
 @section scripts{
 <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                $.getJSON('@Url.Action("AtualizarDoacao", "Flamengo")', function (jogadores) {
+                    $.each(jogadores.Jogadores, function (index, jogador) {
+                        console.log(jogador.Id);
+                    });
+                });
+            }, 4000);
+        });
+
+
     function DaUmLike(id) {
         var data = { zagueiroId: id };
         $.ajax({
             type: "POST",
             url: '@Url.Action("LikeNaZagueirada")',
             data: data,
-            success: function(response) {
+                success: function (response) {
                 $("[name='" + id + "']").text(response);
             }
         });

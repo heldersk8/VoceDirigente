@@ -30,16 +30,6 @@
 </div>
 
 <script>
-    $(document).ready(function () {
-        setInterval(function () {
-            $.getJSON('@Url.Action("AtualizarDoacao", "Flamengo")', function (jogadores) {
-                $.each(jogadores.Jogadores, function (index, jogador) {
-                    console.log(jogador.Id);
-                });
-            });
-        }, 4000);
-    });
-
     function SalvarDoacao() {
         var valorDaDoacao = parseFloat($("#Doacao").val());
         var data = { valorDaDoacao: valorDaDoacao, idJogador: $("#IdJogador").val() };
