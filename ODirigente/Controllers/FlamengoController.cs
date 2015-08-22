@@ -9,13 +9,11 @@ namespace ODirigente.Controllers
     {
         private readonly IJogadorRepositorio _jogadorRepositorio;
         private readonly IDoadorRepositorio _doadorRepositorio;
-        private readonly IDoacaoRepositorio _doacaoRepositorio;
 
-        public FlamengoController(IJogadorRepositorio jogadorRepositorio, IDoadorRepositorio doadorRepositorio, IDoacaoRepositorio doacaoRepositorio)
+        public FlamengoController(IJogadorRepositorio jogadorRepositorio, IDoadorRepositorio doadorRepositorio)
         {
             _jogadorRepositorio = jogadorRepositorio;
             _doadorRepositorio = doadorRepositorio;
-            _doacaoRepositorio = doacaoRepositorio;
         }
 
         public ActionResult Index()
