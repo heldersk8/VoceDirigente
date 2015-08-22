@@ -1,7 +1,6 @@
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
 using System.Web.Mvc;
-using Dominio.Jogadores;
 
 namespace ODirigente.Controllers
 {
@@ -12,7 +11,6 @@ namespace ODirigente.Controllers
         public FlamengoController(IJogadorRepositorio jogadorRepositorio)
         {
             _jogadorRepositorio = jogadorRepositorio;
-
         }
 
         public ActionResult Index()
