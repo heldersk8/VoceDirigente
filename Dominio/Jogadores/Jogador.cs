@@ -1,5 +1,7 @@
 ﻿using Dominio.Comum;
 using System;
+using System.Collections.Generic;
+using Dominio.Doacoes;
 
 namespace Dominio.Jogadores
 {
@@ -17,6 +19,7 @@ namespace Dominio.Jogadores
         public virtual decimal ValorDoPasse { get; set; }
         public virtual int Likes { get; set; }
         public virtual int Dislikes { get; set; }
+        public virtual IEnumerable<Doacao> Doacoes { get; set; }
 
         protected Jogador() { }
 
@@ -31,9 +34,10 @@ namespace Dominio.Jogadores
             Desarmes = desarmes;
             Altura = altura;
             EhCanhoto = ehCanhoto;
+            Doacoes = new List<Doacao>();
         }
 
-        public virtual void  DarUmLike()
+        public virtual void DarUmLike()
         {
             Likes++;
         }

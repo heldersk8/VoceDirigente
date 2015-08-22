@@ -9,7 +9,6 @@ namespace Infra.Mapeamentos
         {
             Map(x => x.Valor);
             References(x => x.Doador);
-            References(x => x.Jogador);
         }
     }
 }
