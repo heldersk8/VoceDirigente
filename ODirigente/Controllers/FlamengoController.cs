@@ -1,6 +1,7 @@
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
 using System.Web.Mvc;
+using Dominio.Jogadores;
 
 namespace ODirigente.Controllers
 {
@@ -44,6 +45,14 @@ namespace ODirigente.Controllers
             var numeroDelikes = _jogadorRepositorio.ObterPor(zagueiroId).Likes;
 
             return Json(numeroDelikes);
+        }
+
+        public ActionResult JogadorPorId(int idDoJogador)
+        {
+            var jogadorPorId = _jogadorRepositorio.ObterPor(idDoJogador);
+            var viewModel = new JogadorPerfilVm { Jogador = jogadorPorId};
+
+            return View(viewModel);
         }
 
     }
