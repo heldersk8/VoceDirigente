@@ -213,6 +213,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Interface\css\jogadores.css.map" />
     <Content Include="Interface\css\jogadores.scss" />
+    <Content Include="Views\Flamengo\Campanhas.cshtml" />
+    <None Include="Properties\PublishProfiles\odirigente %283%29.pubxml" />
     <None Include="Views\Flamengo\Index.cshtml" />
     <Content Include="Interface\css\campanhas.css" />
     <Content Include="Interface\css\jogadores.css" />
@@ -312,10 +314,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Zagueiro\Index.cshtml" />
     <Content Include="Views\Flamengo\JogadoresPorPosicao.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
