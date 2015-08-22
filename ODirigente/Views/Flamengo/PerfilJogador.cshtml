@@ -21,7 +21,7 @@
                 <strong>1.5k</strong>
             </span>
     </div>
-    <span class="doacao">
+    <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
             Fazer doação
         </span>
 </div>
@@ -65,30 +65,6 @@
         <span>1</span>
     </li>
 </ul>
-
-<div id="divDoacao" class="modal ">
-    <span class="fechar"></span>
-    <ul class="beneficios">
-        <li>
-            <span class="icone-camisa"></span>
-            <span class="valor-doacao">+ R$ 300,00</span>
-            <span class="beneficio">Camiseta Personalizada</span>
-        </li>
-        <li>
-            <span class="icone-estadio"></span>
-            <span class="valor-doacao">+ R$ 1.000,00</span>
-            <span class="beneficio">Visita ao Estádio</span>
-        </li>
-        <li>
-            <span class="icone-treino"></span>
-            <span class="valor-doacao">+ R$ 3.000,00</span>
-            <span class="beneficio">Assistir Treino</span>
-        </li>
-    </ul>
-    <input id="IdJogador" type="hidden" />
-    <input id="Doacao" type="number" placeholder="Digite o valor">
-    <input id="SalvarDoacao" onclick="SalvarDoacao();" value="Doar" type="submit">
-</div>
 
 @section scripts {
     <script>
