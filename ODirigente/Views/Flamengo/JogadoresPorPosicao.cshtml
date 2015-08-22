@@ -6,7 +6,7 @@
 {
     @Html.HiddenFor(model => jogador.Id)
     <div class="jogadores">
-        <a href="#">
+        <a href="@Url.Action("JogadoresPorPosicao", new { jogador })">
             <h2>@jogador.Apelido</h2>
         <span class="escolha">
             <small>Valor arrecadado</small>
