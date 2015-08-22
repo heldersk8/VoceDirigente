@@ -1,0 +1,160 @@
+/* line 30, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-radius-padrao {
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* line 34, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-top-radius-padrao {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
+
+/* line 38, /Users/Glauber/Documents/Projects/o_dirigente/app/css/_mixins.scss */
+.border-right-radius-padrao {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+@keyframes aparecer-campanha {
+  from {
+    opacity: 0;
+    margin-top: 30px; }
+  to {
+    opacity: 1;
+    margin-top: 0px; } }
+
+/* line 8, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+.perfil {
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.5);
+  -webkit-animation: aparecer-campanha 1s ease 1s 1 normal;
+  -webkit-animation-fill-mode: both;
+  animation: aparecer-campanha 1.5s ease 1s 1 normal;
+  animation-fill-mode: both; }
+  /* line 21, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil:nth-child(odd) {
+    margin-left: 0; }
+  /* line 25, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil h2 {
+    color: #fff;
+    font-size: 40px;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 100;
+    top: 90px;
+    right: 15px;
+    text-shadow: 0px 5px 10px black;
+    display: inline-block;
+    z-index: 1;
+    text-align: right;
+    width: 60%; }
+  /* line 41, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil .escolha {
+    color: #fc0d08;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 800;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    z-index: -1;
+    text-align: right;
+    width: 100%; }
+    /* line 57, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .escolha small {
+      font-size: 8px;
+      display: block;
+      font-weight: 100; }
+    /* line 63, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .escolha span {
+      display: block; }
+    /* line 67, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .escolha .barra-de-progresso {
+      height: 10px;
+      width: 50%;
+      border: 2px solid #fff;
+      display: inline-block;
+      margin: 2px 0;
+      position: relative;
+      -ms-transform: skewX(-20deg);
+      -webkit-transform: skewX(-20deg);
+      transform: skewX(-20deg); }
+      /* line 78, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+      .perfil .escolha .barra-de-progresso__porcentagem {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        background-color: white;
+        height: 100%; }
+  /* line 89, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil .doacao {
+    color: #fc0d08;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 800;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    z-index: 1;
+    text-align: right; }
+    /* line 106, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .doacao small {
+      font-size: 8px;
+      display: block;
+      font-weight: 100; }
+  /* line 113, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil .likes {
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 20px;
+    width: 90px;
+    left: 20px;
+    z-index: 2;
+    text-align: center; }
+    /* line 123, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .likes .icone-curtir {
+      background: url(../img/icone_curtir.svg);
+      width: 16px;
+      height: 16px; }
+    /* line 129, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .likes span {
+      font-size: 12px;
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle; }
+    /* line 136, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+    .perfil .likes strong {
+      font-size: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 10px;
+      color: #fc0d08; }
+  /* line 145, /Users/Glauber/Documents/Projects/o_dirigente/app/css/perfil.scss */
+  .perfil img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: -25px; }
+
+/*# sourceMappingURL=perfil.css.map */
