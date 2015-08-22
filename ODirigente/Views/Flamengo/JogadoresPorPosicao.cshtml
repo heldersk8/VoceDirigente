@@ -4,19 +4,18 @@
 
 @foreach (var jogador in Model.Jogadores)
 {
-    @Html.HiddenFor(model => jogador.Id)
     <div class="jogadores">
-        <a href="@Url.Action("JogadoresPorPosicao", new { jogador })">
+        <a href="#">
             <h2>@jogador.Apelido</h2>
-        <span class="escolha">
-            <small>Valor arrecadado</small>
-            @jogador.ValorDoPasse
-        </span>
-            <span class="doacao">
-                Fazer doação
+            <span class="escolha">
+                <small>Valor arrecadado</small>
+                @jogador.ValorDoPasse
             </span>
             <img src="~/Interface/img/pato.png" />
         </a>
+        <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
+            Fazer doação
+        </span>
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
                 <span class="icone-curtir"></span>
@@ -26,6 +25,7 @@
         </div>
     </div>
 }
+
 
 <script>
     function DaUmLike(id) {
@@ -38,8 +38,4 @@
             success: function (response) { alert(response); }
         });
     }
-
-    setInterval(function () {
-        console.log("Teste");
-    }, 1000);
 </script>

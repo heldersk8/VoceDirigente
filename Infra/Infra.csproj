@@ -75,6 +75,8 @@
     <Compile Include="Mapeamentos\JogadorMap.cs" />
     <Compile Include="Mapeamentos\TituloMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\Dominio\DoacaoRepositorio.cs" />
+    <Compile Include="Repositorios\Dominio\DoadorRepositorio.cs" />
     <Compile Include="Repositorios\Dominio\JogadorRepositorio.cs" />
     <Compile Include="SessionFactory\ConfiguradorDeSessionFactory.cs" />
     <Compile Include="SessionFactory\ConfiguradorDeSessionFactoryComAtualizacaoDeEsquema.cs" />
