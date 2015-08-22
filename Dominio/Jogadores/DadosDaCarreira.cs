@@ -6,7 +6,7 @@ namespace Dominio.Jogadores
     public class DadosDaCarreira : Entidade<DadosDaCarreira>
     {
         public virtual Clubes ClubeAtual { get; set; }
-        public virtual List<Titulo> Titulos { get; set; }
+        public virtual IEnumerable<Titulo> Titulos { get; set; }
         public virtual string Biografia { get; set; }
         public virtual Jogador Jogador { get; set; }
 

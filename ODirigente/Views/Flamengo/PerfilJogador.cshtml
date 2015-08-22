@@ -1,6 +1,7 @@
 ﻿@model ODirigente.ViewModels.JogadorPerfilVm
 @{
     var jogador = @Model.Jogador;
+    var dadosDaCarreira = @Model.DadosDaCarreira;
 }
 
 <div href="jogadores.html" class="perfil">
@@ -14,11 +15,11 @@
             </span>
             <small>Precisamos de @String.Format("{0:C}", @jogador.ValorDoPasse)</small>
         </span>
-    <div class="likes">
+    <div class="likes" onclick="DaUmLike(@jogador.Id)">
         <span class="likes__curtir">
                 <span class="icone-curtir"></span>
                 <span>Curtir</span>
-                <strong>1.5k</strong>
+                <strong name="@jogador.Id">@jogador.Likes</strong>
             </span>
     </div>
     <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
@@ -27,6 +28,10 @@
 </div>
 
 <ul class="ficha">
+    <li>
+        <span>Clube Atual</span>
+        <span>@dadosDaCarreira.ClubeAtual</span>
+    </li>
     <li>
         <span>Posição</span>
         <span>@jogador.Posicao</span>
@@ -51,19 +56,17 @@
 </ul>
 
 <ul class="biografia">
-    Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-
+    @dadosDaCarreira.Biografia
 </ul>
 
 <ul class="ficha">
-    <li>
-        <span>Campeonato Brasileiro</span>
-        <span>2</span>
-    </li>
-    <li>
-        <span>UEFA</span>
-        <span>1</span>
-    </li>
+    @foreach( var titulo in dadosDaCarreira.Titulos)
+    {
+        <li>
+            <span>@titulo.NomeDoCampeonato</span>
+            <span>@titulo.Ano</span>
+        </li>
+    }
 </ul>
 
 @section scripts {
@@ -72,5 +75,17 @@
             var percentual = @jogador.PorcentagemBarraDeProgresso + "%";
             $(".barra-de-progresso__porcentagem").width(percentual);
         });
+
+        function DaUmLike(id) {
+            var data = { zagueiroId: id };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("LikeNaZagueirada")',
+                data: data,
+                success: function (response) {
+                    $("[name='" + id + "']").text(response);
+                }
+            });
+        }
     </script>
 }
