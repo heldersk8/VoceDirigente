@@ -272,12 +272,12 @@ h2 {
 }
 
 @keyframes aparecer-modal {
-    from { bottom: -100%; }
-    to { bottom: 0; }
+    from { top: 100%; }
+    to { top: 0; }
 }
 @-webkit-keyframes aparecer-modal {
-    from { bottom: -100%; }
-    to { bottom: 0; }
+    from { top: 100%; }
+    to { top: 0; }
 }
 .modal {
     background: $branco;
