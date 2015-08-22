@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Dominio.Comum;
+﻿using Dominio.Comum;
 using Dominio.Validacao;
 
 namespace Dominio.Doacoes
