@@ -2,6 +2,7 @@ using Dominio.Doacoes;
 using Dominio.Repositorios;
 using ODirigente.ViewModels;
 using System.Web.Mvc;
+using Dominio.Jogadores;
 
 namespace ODirigente.Controllers
 {
@@ -48,6 +49,14 @@ namespace ODirigente.Controllers
             var numeroDelikes = _jogadorRepositorio.ObterPor(zagueiroId).Likes;
 
             return Json(numeroDelikes);
+        }
+
+        public ActionResult JogadorPerfil(int idDoJogador)
+        {
+            var jogadorPerfil = _jogadorRepositorio.ObterPor(idDoJogador);
+            var viewModel = new JogadorPerfilVm { Jogador = jogadorPerfil };
+
+            return View("PerfilJogador",viewModel);
         }
 
         public JsonResult Doar(decimal valorDaDoacao, int idJogador)

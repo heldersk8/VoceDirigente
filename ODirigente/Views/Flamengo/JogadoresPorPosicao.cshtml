@@ -5,7 +5,7 @@
 @foreach (var jogador in Model.Jogadores)
 {
     <div class="jogadores">
-        <a href="#">
+        <a href="@Url.Action("JogadorPerfil", new { idDoJogador=jogador.Id })">
             <h2>@jogador.Apelido</h2>
             <span class="escolha">
                 <small>Valor arrecadado</small>
@@ -16,6 +16,7 @@
         <span class="doacao" onclick="AbriDoacao(@jogador.Id);">
             Fazer doação
         </span>
+        <img src="~/Interface/img/" @string.Format("{0}.png", jogador.Id) />
         <div class="likes" onclick="DaUmLike(@jogador.Id)">
             <span class="likes__curtir">
                 <span class="icone-curtir"></span>
@@ -25,7 +26,6 @@
         </div>
     </div>
 }
-
 
 <script>
     function DaUmLike(id) {
